@@ -1,0 +1,1994 @@
+/* ============================================================
+   STUBER.WEB — PROJECT CONTACT FORM
+   ============================================================ */
+
+
+/* ============================================================
+   OVERLAY
+   ============================================================ */
+
+.project-form {
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1.5rem;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(0, 168, 255, 0.08),
+            transparent 45%
+        ),
+        rgba(4, 7, 11, 0.88);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+}
+
+
+.project-form.is-open {
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+/* ============================================================
+   DIALOG
+   ============================================================ */
+
+.project-form__dialog {
+
+    position: relative;
+
+    width: min(960px, 100%);
+
+    max-height:
+        min(900px, calc(100vh - 3rem));
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(17, 23, 32, 0.98),
+            rgba(8, 12, 17, 0.99)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 40px 100px rgba(0, 0, 0, 0.55),
+        0 0 0 1px rgba(0, 168, 255, 0.025);
+
+    transform:
+        translateY(24px)
+        scale(0.98);
+
+    transition:
+        transform 0.4s
+        cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.project-form.is-open .project-form__dialog {
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.project-form__header {
+
+    position: relative;
+
+    flex-shrink: 0;
+
+    padding:
+        2rem
+        5.5rem
+        1.5rem
+        2.25rem;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+}
+
+
+.project-form__header::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #00a8ff,
+            transparent
+        );
+
+    opacity: 0.8;
+}
+
+
+.project-form__header h2 {
+
+    margin: 0;
+
+    font-family:
+        var(
+            --font-heading,
+            "Space Grotesk",
+            sans-serif
+        );
+
+    font-size:
+        clamp(
+            1.7rem,
+            3vw,
+            2.4rem
+        );
+
+    line-height: 1.1;
+
+    letter-spacing: -0.04em;
+
+    color: #ffffff;
+}
+
+
+.project-form__header p {
+
+    max-width: 620px;
+
+    margin:
+        0.65rem
+        0
+        0;
+
+    font-size: 0.95rem;
+
+    line-height: 1.65;
+
+    color: #7d8794;
+}
+
+
+/* ============================================================
+   SECTION LABEL
+   ============================================================ */
+
+.project-form__header .section-label,
+.project-form__success .section-label {
+
+    display: inline-block;
+
+    margin-bottom: 0.65rem;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+
+    color: #00a8ff;
+}
+
+
+/* ============================================================
+   CLOSE
+   ============================================================ */
+
+.project-form__close {
+
+    position: absolute;
+
+    top: 1.5rem;
+    right: 1.5rem;
+
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    color: #d7dde5;
+
+    font-family: inherit;
+
+    font-size: 1.4rem;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.project-form__close:hover {
+
+    background:
+        rgba(0, 168, 255, 0.08);
+
+    border-color:
+        rgba(0, 168, 255, 0.3);
+
+    color: #ffffff;
+
+    transform: rotate(4deg);
+}
+
+
+.project-form__close:focus-visible {
+
+    outline:
+        2px solid
+        #00a8ff;
+
+    outline-offset: 3px;
+}
+
+
+/* ============================================================
+   PROGRESS
+   ============================================================ */
+
+.project-form__progress {
+
+    flex-shrink: 0;
+
+    padding: 0 2.25rem;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+}
+
+
+.project-form__progress-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0.95rem
+        0
+        0.7rem;
+}
+
+
+.project-form__progress-top span:first-child {
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    color: #7d8794;
+}
+
+
+.project-form__progress-top span:last-child {
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    color: #d7dde5;
+}
+
+
+#formProgressPercent {
+
+    color: #00a8ff;
+}
+
+
+.project-form__progress-bar {
+
+    width: 100%;
+
+    height: 3px;
+
+    overflow: hidden;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+}
+
+
+#formProgressBar {
+
+    display: block;
+
+    width: 14.28%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #007fc2,
+            #00a8ff
+        );
+
+    box-shadow:
+        0 0 14px
+        rgba(0, 168, 255, 0.55);
+
+    transition:
+        width 0.35s ease;
+}
+
+
+/* ============================================================
+   FORM BODY
+   ============================================================ */
+
+.project-form__body {
+
+    flex: 1;
+
+    min-height: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow-y: auto;
+
+    padding: 2.25rem;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        rgba(0, 168, 255, 0.35)
+        transparent;
+}
+
+
+.project-form__body::-webkit-scrollbar {
+
+    width: 6px;
+}
+
+
+.project-form__body::-webkit-scrollbar-track {
+
+    background: transparent;
+}
+
+
+.project-form__body::-webkit-scrollbar-thumb {
+
+    background:
+        rgba(0, 168, 255, 0.3);
+
+    border-radius: 999px;
+}
+
+
+/* ============================================================
+   STEPS
+   ============================================================ */
+
+.project-form__step {
+
+    display: none !important;
+
+    animation:
+        projectStepIn
+        0.35s
+        ease
+        both;
+}
+
+
+.project-form__step.is-active {
+
+    display: block !important;
+}
+
+
+@keyframes projectStepIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(8px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* ============================================================
+   STEP HEADING
+   ============================================================ */
+
+.project-form__step-heading {
+
+    margin-bottom: 1.75rem;
+}
+
+
+.project-form__step-heading > span {
+
+    display: block;
+
+    margin-bottom: 0.5rem;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+
+    color: #00a8ff;
+}
+
+
+.project-form__step-heading h3 {
+
+    margin: 0;
+
+    font-family:
+        var(
+            --font-heading,
+            "Space Grotesk",
+            sans-serif
+        );
+
+    font-size:
+        clamp(
+            1.35rem,
+            2.5vw,
+            1.8rem
+        );
+
+    line-height: 1.2;
+
+    letter-spacing: -0.03em;
+
+    color: #ffffff;
+}
+
+
+.project-form__step-heading p {
+
+    margin:
+        0.55rem
+        0
+        0;
+
+    color: #7d8794;
+
+    font-size: 0.92rem;
+
+    line-height: 1.6;
+}
+
+
+/* ============================================================
+   FORM GRID
+   ============================================================ */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 1.2rem;
+}
+
+
+/* ============================================================
+   FORM FIELD
+   ============================================================ */
+
+.form-field {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.55rem;
+
+    margin-bottom: 1.2rem;
+}
+
+
+.form-field:last-child {
+
+    margin-bottom: 0;
+}
+
+
+.form-field label {
+
+    display: block;
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+
+    color: #d7dde5;
+}
+
+
+.form-field label > span {
+
+    color: #00a8ff;
+}
+
+
+/* ============================================================
+   INPUTS
+   ============================================================ */
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+
+    width: 100%;
+
+    min-height: 48px;
+
+    padding:
+        0.9rem
+        1rem;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 0.88rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+
+    color: #59636f;
+}
+
+
+.form-field input:hover,
+.form-field textarea:hover,
+.form-field select:hover {
+
+    border-color:
+        rgba(255, 255, 255, 0.16);
+}
+
+
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+
+    border-color:
+        rgba(0, 168, 255, 0.65);
+
+    background:
+        rgba(0, 168, 255, 0.035);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(0, 168, 255, 0.08);
+}
+
+
+.form-field textarea {
+
+    min-height: 130px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+.form-field select {
+
+    appearance: none;
+
+    cursor: pointer;
+
+    background-image:
+        linear-gradient(
+            45deg,
+            transparent 50%,
+            #7d8794 50%
+        ),
+        linear-gradient(
+            135deg,
+            #7d8794 50%,
+            transparent 50%
+        );
+
+    background-position:
+        calc(100% - 18px) 50%,
+        calc(100% - 13px) 50%;
+
+    background-size:
+        5px 5px,
+        5px 5px;
+
+    background-repeat: no-repeat;
+
+    padding-right: 2.5rem;
+}
+
+
+.form-field select option {
+
+    background: #0e141c;
+
+    color: #ffffff;
+}
+
+
+/* ============================================================
+   OPTIONS
+   ============================================================ */
+
+.form-options {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 0.75rem;
+}
+
+
+.form-option {
+
+    position: relative;
+
+    display: block;
+
+    cursor: pointer;
+}
+
+
+.form-option input {
+
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   OPTION CARD
+   ============================================================ */
+
+.form-option > span {
+
+    min-height: 78px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 1rem;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 14px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.form-option:hover > span {
+
+    border-color:
+        rgba(0, 168, 255, 0.3);
+
+    background:
+        rgba(0, 168, 255, 0.035);
+
+    transform:
+        translateY(-1px);
+}
+
+
+.form-option input:checked + span {
+
+    border-color:
+        rgba(0, 168, 255, 0.65);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 168, 255, 0.1),
+            rgba(0, 168, 255, 0.025)
+        );
+
+    box-shadow:
+        inset
+        0 0 0 1px
+        rgba(0, 168, 255, 0.08),
+        0 0 25px
+        rgba(0, 168, 255, 0.05);
+}
+
+
+.form-option input:focus-visible + span {
+
+    outline:
+        2px solid
+        #00a8ff;
+
+    outline-offset: 2px;
+}
+
+
+.form-option strong {
+
+    display: block;
+
+    font-size: 0.88rem;
+
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+.form-option small {
+
+    display: block;
+
+    margin-top: 0.25rem;
+
+    font-size: 0.72rem;
+
+    line-height: 1.45;
+
+    color: #7d8794;
+}
+
+
+/* ============================================================
+   COMPACT OPTIONS
+   ============================================================ */
+
+.form-option--compact > span {
+
+    min-height: 52px;
+
+    align-items: center;
+
+    font-size: 0.78rem;
+
+    color: #b7c0ca;
+}
+
+
+.form-option--compact input:checked + span {
+
+    color: #ffffff;
+}
+
+
+/* ============================================================
+   CONSENT
+   ============================================================ */
+
+.form-consent {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 0.75rem;
+
+    margin-top: 1.5rem;
+
+    cursor: pointer;
+}
+
+
+.form-consent input {
+
+    width: 16px;
+    height: 16px;
+
+    margin-top: 0.15rem;
+
+    flex-shrink: 0;
+
+    accent-color: #00a8ff;
+
+    cursor: pointer;
+}
+
+
+.form-consent > span {
+
+    font-size: 0.72rem;
+
+    line-height: 1.55;
+
+    color: #7d8794;
+}
+
+
+.form-consent input:focus-visible {
+
+    outline:
+        2px solid
+        #00a8ff;
+
+    outline-offset: 2px;
+}
+
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+.project-form__navigation {
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin-top: auto;
+
+    padding-top: 1.5rem;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+}
+
+
+.project-form__navigation[hidden] {
+
+    display: none !important;
+}
+
+
+.project-form__navigation button {
+
+    min-height: 44px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 0.5rem;
+
+    padding:
+        0.75rem
+        1.1rem;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+.project-form__navigation button:hover {
+
+    transform:
+        translateY(-1px);
+}
+
+
+.project-form__navigation button:disabled {
+
+    opacity: 0.55;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+#formBack {
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    color: #b7c0ca;
+}
+
+
+#formBack:hover {
+
+    border-color:
+        rgba(255, 255, 255, 0.18);
+
+    color: #ffffff;
+}
+
+
+#formNext,
+#formSubmit {
+
+    border:
+        1px solid
+        rgba(0, 168, 255, 0.5);
+
+    background: #00a8ff;
+
+    color: #061018;
+
+    box-shadow:
+        0 8px 24px
+        rgba(0, 168, 255, 0.14);
+}
+
+
+#formNext:hover,
+#formSubmit:hover {
+
+    background: #20b3ff;
+}
+
+
+#formSubmit {
+
+    min-width: 150px;
+}
+
+
+/* ============================================================
+   SUMMARY
+   ============================================================ */
+
+.project-form__summary {
+
+    display: none;
+}
+
+
+.project-form__summary.is-active {
+
+    display: block;
+
+    animation:
+        projectStepIn
+        0.35s
+        ease
+        both;
+}
+
+
+.project-form__summary-content {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 0.75rem;
+}
+
+
+.project-form__summary-item {
+
+    padding: 1rem;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+}
+
+
+.project-form__summary-label {
+
+    display: block;
+
+    margin-bottom: 0.35rem;
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    color: #59636f;
+}
+
+
+.project-form__summary-value {
+
+    font-size: 0.84rem;
+
+    line-height: 1.5;
+
+    color: #ffffff;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ============================================================
+   SUCCESS SCREEN
+   ============================================================ */
+
+.project-form__success {
+
+    display: none;
+
+    padding:
+        2rem
+        1rem
+        1rem;
+
+    text-align: center;
+
+    animation:
+        projectSuccessIn
+        0.5s
+        ease
+        both;
+}
+
+
+.project-form__success.is-visible {
+
+    display: block;
+}
+
+
+.project-form__success[hidden] {
+
+    display: none !important;
+}
+
+
+@keyframes projectSuccessIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(14px)
+            scale(0.98);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* ============================================================
+   SUCCESS ICON
+   ============================================================ */
+
+.project-form__success-icon {
+
+    width: 72px;
+    height: 72px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin:
+        0
+        auto
+        1.35rem;
+
+    border:
+        1px solid
+        rgba(0, 168, 255, 0.35);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0, 168, 255, 0.13),
+            rgba(0, 168, 255, 0.04)
+        );
+
+    color: #00a8ff;
+
+    font-family:
+        var(
+            --font-heading,
+            "Space Grotesk",
+            sans-serif
+        );
+
+    font-size: 1.8rem;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 0 35px
+        rgba(0, 168, 255, 0.1);
+}
+
+
+.project-form__success h3 {
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    font-family:
+        var(
+            --font-heading,
+            "Space Grotesk",
+            sans-serif
+        );
+
+    font-size:
+        clamp(
+            1.6rem,
+            3vw,
+            2.2rem
+        );
+
+    line-height: 1.15;
+
+    letter-spacing: -0.03em;
+
+    color: #ffffff;
+}
+
+
+.project-form__success p {
+
+    max-width: 520px;
+
+    margin:
+        0.9rem
+        auto
+        1.75rem;
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+
+    color: #7d8794;
+}
+
+
+/* ============================================================
+   SUCCESS WHATSAPP
+   ============================================================ */
+
+.project-form__success-whatsapp {
+
+    width: min(100%, 470px);
+
+    margin:
+        0
+        auto
+        1.5rem;
+
+    padding: 1rem;
+
+    border:
+        1px solid
+        rgba(0, 168, 255, 0.14);
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0, 168, 255, 0.07),
+            rgba(255, 255, 255, 0.02)
+        );
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.12);
+}
+
+
+.project-form__success-whatsapp-label {
+
+    display: block;
+
+    margin-bottom: 0.7rem;
+
+    font-size: 0.72rem;
+
+    font-weight: 500;
+
+    color: #7d8794;
+}
+
+
+.project-form__whatsapp-link {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 0.65rem;
+
+    min-height: 50px;
+
+    padding:
+        0.8rem
+        1rem;
+
+    border:
+        1px solid
+        rgba(0, 168, 255, 0.3);
+
+    border-radius: 11px;
+
+    background:
+        rgba(0, 168, 255, 0.07);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.project-form__whatsapp-link:hover {
+
+    background:
+        rgba(0, 168, 255, 0.13);
+
+    border-color:
+        rgba(0, 168, 255, 0.55);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 168, 255, 0.1);
+}
+
+
+.project-form__whatsapp-link > span:first-child {
+
+    font-size: 0.86rem;
+
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+.project-form__whatsapp-link strong {
+
+    font-size: 0.82rem;
+
+    font-weight: 500;
+
+    color: #00a8ff;
+}
+
+
+.project-form__whatsapp-link .button__icon {
+
+    margin-left: 0.2rem;
+
+    color: #00a8ff;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.project-form__whatsapp-link:hover .button__icon {
+
+    transform:
+        translate(2px, -2px);
+}
+
+
+/* ============================================================
+   SUCCESS CLOSE BUTTON
+   ============================================================ */
+
+.project-form__success .button--outline {
+
+    min-height: 44px;
+
+    padding:
+        0.7rem
+        1.2rem;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    color: #b7c0ca;
+
+    font-family: inherit;
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.project-form__success .button--outline:hover {
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    border-color:
+        rgba(255, 255, 255, 0.18);
+
+    color: #ffffff;
+}
+
+
+/* ============================================================
+   ERROR
+   ============================================================ */
+
+.project-form__error {
+
+    display: none;
+
+    margin-top: 1rem;
+
+    padding:
+        0.9rem
+        1rem;
+
+    border:
+        1px solid
+        rgba(255, 80, 80, 0.2);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 80, 80, 0.06);
+
+    color: #ff9b9b;
+
+    font-size: 0.78rem;
+
+    line-height: 1.5;
+}
+
+
+.project-form__error.is-active {
+
+    display: block;
+}
+
+
+/* ============================================================
+   LOADING
+   ============================================================ */
+
+.project-form__navigation button.is-loading {
+
+    pointer-events: none;
+
+    opacity: 0.65;
+}
+
+
+.project-form__navigation button.is-loading .button__icon {
+
+    animation:
+        projectFormSpin
+        0.8s
+        linear
+        infinite;
+}
+
+
+@keyframes projectFormSpin {
+
+    to {
+
+        transform:
+            rotate(360deg);
+    }
+}
+
+
+/* ============================================================
+   VALIDATION
+   ============================================================ */
+
+.form-field.has-error input,
+.form-field.has-error textarea,
+.form-field.has-error select {
+
+    border-color:
+        rgba(255, 90, 90, 0.65);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(255, 90, 90, 0.06);
+}
+
+
+.form-field.has-error label {
+
+    color: #ff9b9b;
+}
+
+
+/* ============================================================
+   HERO WHATSAPP
+   ============================================================ */
+
+.hero__whatsapp {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 0.65rem;
+
+    margin-top: 1.2rem;
+
+    font-size: 0.78rem;
+
+    line-height: 1.5;
+
+    color: #7d8794;
+}
+
+
+.hero__whatsapp-status {
+
+    position: relative;
+
+    width: 7px;
+    height: 7px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #00a8ff;
+
+    box-shadow:
+        0 0 10px
+        rgba(0, 168, 255, 0.5);
+}
+
+
+.hero__whatsapp-status::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -3px;
+
+    border:
+        1px solid
+        rgba(0, 168, 255, 0.3);
+
+    border-radius: 50%;
+
+    animation:
+        whatsappPulse
+        2s
+        ease-out
+        infinite;
+}
+
+
+.hero__whatsapp a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.25rem;
+
+    color: #00a8ff;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.hero__whatsapp a:hover {
+
+    color: #ffffff;
+
+    transform:
+        translateX(2px);
+}
+
+
+.hero__whatsapp a span {
+
+    font-size: 0.9rem;
+}
+
+
+@keyframes whatsappPulse {
+
+    0% {
+
+        opacity: 0.8;
+
+        transform:
+            scale(0.7);
+    }
+
+    70% {
+
+        opacity: 0;
+
+        transform:
+            scale(1.7);
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            scale(1.7);
+    }
+}
+
+
+/* ============================================================
+   BODY LOCK
+   ============================================================ */
+
+body.project-form-open {
+
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 760px) {
+
+    .project-form {
+
+        padding: 0;
+
+        align-items: flex-end;
+    }
+
+
+    .project-form__dialog {
+
+        width: 100%;
+
+        height:
+            calc(100vh - 0.5rem);
+
+        max-height:
+            calc(100vh - 0.5rem);
+
+        border-radius:
+            22px
+            22px
+            0
+            0;
+
+        border-bottom: 0;
+    }
+
+
+    .project-form__header {
+
+        padding:
+            1.5rem
+            4.5rem
+            1.25rem
+            1.25rem;
+    }
+
+
+    .project-form__header h2 {
+
+        font-size: 1.55rem;
+    }
+
+
+    .project-form__header p {
+
+        font-size: 0.82rem;
+    }
+
+
+    .project-form__close {
+
+        top: 1.15rem;
+
+        right: 1.15rem;
+    }
+
+
+    .project-form__progress {
+
+        padding:
+            0
+            1.25rem;
+    }
+
+
+    .project-form__body {
+
+        padding:
+            1.5rem
+            1.25rem
+            1.5rem;
+    }
+
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-options {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .project-form__summary-content {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .project-form__success {
+
+        padding:
+            1.5rem
+            0.25rem
+            1rem;
+    }
+
+
+    .project-form__success-icon {
+
+        width: 64px;
+        height: 64px;
+
+        font-size: 1.6rem;
+    }
+
+
+    .project-form__success h3 {
+
+        font-size: 1.55rem;
+    }
+
+
+    .project-form__success p {
+
+        font-size: 0.84rem;
+    }
+
+
+    .project-form__success-whatsapp {
+
+        padding: 0.8rem;
+    }
+
+
+    .project-form__whatsapp-link {
+
+        flex-wrap: wrap;
+
+        gap: 0.4rem;
+    }
+
+
+    .project-form__whatsapp-link strong {
+
+        font-size: 0.76rem;
+    }
+
+
+    .project-form__navigation {
+
+        gap: 0.65rem;
+
+        padding-top: 1rem;
+    }
+
+
+    .project-form__navigation button {
+
+        flex: 1;
+
+        min-width: 0;
+
+        padding-inline:
+            0.9rem;
+    }
+
+
+    .hero__whatsapp {
+
+        margin-top: 1rem;
+    }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+    .project-form__header h2 {
+
+        font-size: 1.4rem;
+    }
+
+
+    .project-form__header p {
+
+        display: none;
+    }
+
+
+    .project-form__body {
+
+        padding:
+            1.35rem
+            1rem
+            1.5rem;
+    }
+
+
+    .project-form__step-heading {
+
+        margin-bottom: 1.25rem;
+    }
+
+
+    .project-form__step-heading h3 {
+
+        font-size: 1.3rem;
+    }
+
+
+    .form-field input,
+    .form-field textarea,
+    .form-field select {
+
+        font-size: 0.85rem;
+    }
+
+
+    .project-form__navigation button {
+
+        font-size: 0.75rem;
+    }
+
+
+    .project-form__success h3 {
+
+        font-size: 1.4rem;
+    }
+
+
+    .project-form__whatsapp-link {
+
+        font-size: 0.78rem;
+    }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .project-form,
+    .project-form__dialog,
+    .project-form__step,
+    .project-form__summary,
+    .project-form__success,
+    #formProgressBar,
+    .project-form__navigation button,
+    .project-form__whatsapp-link,
+    .hero__whatsapp a {
+
+        transition: none !important;
+
+        animation: none !important;
+    }
+
+
+    .hero__whatsapp-status::after {
+
+        animation: none !important;
+    }
+}
