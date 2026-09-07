@@ -1,0 +1,228 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#11171B"/>
+        <stop offset="1" stop-color="#050708"/>
+    </linearGradient>
+
+    <linearGradient id="car" x1="400" y1="500" x2="1250" y2="760" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#313A40"/>
+        <stop offset="0.5" stop-color="#111619"/>
+        <stop offset="1" stop-color="#050607"/>
+    </linearGradient>
+
+    <linearGradient id="glass" x1="650" y1="430" x2="1050" y2="600" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#4C5960"/>
+        <stop offset="1" stop-color="#101519"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+        <feDropShadow dx="0" dy="35" stdDeviation="35" flood-opacity=".55"/>
+    </filter>
+</defs>
+
+<!-- BACKGROUND -->
+
+<rect width="1600" height="1000" fill="url(#bg)"/>
+
+<circle cx="1250" cy="190" r="310" fill="#B8FF2C" opacity=".05"/>
+
+<path
+    d="M0 780C340 650 650 650 1600 760V1000H0V780Z"
+    fill="#090C0E"
+/>
+
+<!-- BRAND -->
+
+<text
+    x="100"
+    y="120"
+    fill="#B8FF2C"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="26"
+    font-weight="700"
+    letter-spacing="7"
+>
+    SELVA MOTORS
+</text>
+
+<text
+    x="100"
+    y="165"
+    fill="#899197"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="17"
+    letter-spacing="3"
+>
+    POSADAS · MISIONES
+</text>
+
+<!-- HEADLINE -->
+
+<text
+    x="100"
+    y="300"
+    fill="white"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="70"
+    font-weight="700"
+>
+    TU PRÓXIMO
+</text>
+
+<text
+    x="100"
+    y="375"
+    fill="#B8FF2C"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="70"
+    font-weight="700"
+>
+    MOVIMIENTO.
+</text>
+
+<!-- CAR SHADOW -->
+
+<ellipse
+    cx="900"
+    cy="790"
+    rx="510"
+    ry="65"
+    fill="black"
+    opacity=".65"
+/>
+
+<!-- CAR -->
+
+<g filter="url(#shadow)">
+
+    <!-- BODY -->
+
+    <path
+        d="
+        M380 700
+        C430 635 500 600 600 575
+        L690 455
+        C720 415 765 390 815 390
+        H1010
+        C1065 390 1115 415 1150 455
+        L1240 575
+        C1320 595 1370 635 1405 700
+        L1375 755
+        H410
+        L380 700Z
+        "
+        fill="url(#car)"
+        stroke="#4D575D"
+        stroke-width="4"
+    />
+
+    <!-- WINDOWS -->
+
+    <path
+        d="
+        M710 465
+        L805 420
+        H890
+        V555
+        H650
+        L710 465Z
+        "
+        fill="url(#glass)"
+        stroke="#68737A"
+        stroke-width="3"
+    />
+
+    <path
+        d="
+        M915 420
+        H1000
+        C1030 420 1055 435 1075 460
+        L1140 555
+        H915
+        V420Z
+        "
+        fill="url(#glass)"
+        stroke="#68737A"
+        stroke-width="3"
+    />
+
+    <!-- SIDE LINE -->
+
+    <path
+        d="M460 635H1300"
+        stroke="#69747A"
+        stroke-width="3"
+        opacity=".65"
+    />
+
+    <!-- FRONT LIGHT -->
+
+    <path
+        d="
+        M1270 625
+        C1320 630 1350 650 1370 680
+        L1320 688
+        C1295 678 1275 655 1270 625Z
+        "
+        fill="#D8FF76"
+    />
+
+    <!-- REAR LIGHT -->
+
+    <path
+        d="
+        M415 650
+        C440 630 470 625 495 625
+        L485 680
+        L430 688
+        Z
+        "
+        fill="#8A1F1F"
+    />
+
+    <!-- WHEELS -->
+
+    <circle cx="570" cy="745" r="92" fill="#050607"/>
+    <circle cx="570" cy="745" r="52" fill="#252B2F"/>
+    <circle cx="570" cy="745" r="20" fill="#B8FF2C"/>
+
+    <circle cx="1190" cy="745" r="92" fill="#050607"/>
+    <circle cx="1190" cy="745" r="52" fill="#252B2F"/>
+    <circle cx="1190" cy="745" r="20" fill="#B8FF2C"/>
+
+</g>
+
+<!-- FEATURE -->
+
+<rect
+    x="100"
+    y="850"
+    width="330"
+    height="2"
+    fill="#B8FF2C"
+/>
+
+<text
+    x="100"
+    y="895"
+    fill="white"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="23"
+    font-weight="700"
+>
+    SEMINUEVOS SELECCIONADOS
+</text>
+
+<text
+    x="100"
+    y="930"
+    fill="#929BA0"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="17"
+>
+    Financiación · Permutas · Atención personalizada
+</text>
+
+</svg>

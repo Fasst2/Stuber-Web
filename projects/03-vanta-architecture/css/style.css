@@ -1,0 +1,1426 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+background:#e9e7e1;
+color:#171816;
+font-family:"DM Sans",sans-serif
+}
+
+header{
+height:80px;
+padding:0 5vw;
+display:flex;
+align-items:center;
+border-bottom:1px solid #cfcfc8;
+gap:45px;
+position:sticky;
+top:0;
+background:#e9e7e1ee;
+backdrop-filter:blur(12px);
+z-index:5
+}
+
+.brand{
+font:700 14px "Space Grotesk";
+color:#171816;
+text-decoration:none;
+letter-spacing:.05em;
+margin-right:auto
+}
+
+.brand span{color:#777}
+
+.menu{
+display:none;
+background:none;
+border:0
+}
+
+.menu b{
+font-size:17px;
+margin-left:8px
+}
+
+nav{
+display:flex;
+gap:30px
+}
+
+nav a{
+font-size:12px;
+color:#4f534e;
+text-decoration:none
+}
+
+nav a:hover{color:#171816}
+
+.hero{
+display:grid;
+grid-template-columns:1.2fr .8fr;
+min-height:calc(100vh - 80px)
+}
+
+.hero-image{
+position:relative;
+overflow:hidden
+}
+
+.hero-image img{
+width:100%;
+height:100%;
+object-fit:cover
+}
+
+.hero-caption{
+position:absolute;
+bottom:25px;
+left:30px;
+right:30px;
+display:flex;
+justify-content:space-between;
+color:#e9e7e1;
+font-size:10px;
+letter-spacing:.14em
+}
+
+.hero-copy{
+padding:12vw 7vw;
+display:flex;
+flex-direction:column;
+align-items:flex-start
+}
+
+.hero-copy>span,
+.statement>span,
+.work-head span,
+.process>div>span,
+.contact>span{
+font-size:10px;
+letter-spacing:.17em;
+color:#5f645e
+}
+
+.hero h1,h2{
+font:600 clamp(58px,7vw,100px)/.82 "Space Grotesk";
+letter-spacing:-.08em;
+margin:38px 0
+}
+
+.hero h1 i,
+h2 i{
+font-style:normal;
+font-weight:500
+}
+
+.hero-copy p{
+color:#444943;
+line-height:1.85;
+font-size:18px;
+max-width:430px
+}
+
+.hero-copy>a{
+margin-top:40px;
+color:#171816;
+text-decoration:none;
+font-size:12px;
+border-bottom:1px solid #171816;
+padding-bottom:7px
+}
+
+.hero-copy>a b{
+margin-left:40px
+}
+
+.statement{
+padding:140px 9vw;
+display:grid;
+grid-template-columns:130px 1.3fr 1fr;
+gap:35px;
+background:#171816;
+color:#e9e7e1
+}
+
+.statement>span{
+color:#aeb3ad
+}
+
+.statement h2{
+margin:0
+}
+
+.statement h2 i{
+color:#c5c8c3
+}
+
+.statement div{
+align-self:end;
+max-width:430px;
+color:#d0d4ce;
+font-size:17px;
+line-height:1.85
+}
+
+.work{
+padding:140px 7vw
+}
+
+.work-head{
+display:flex;
+justify-content:space-between;
+align-items:end
+}
+
+.work-head h2{
+margin:25px 0 70px
+}
+
+.work-head p{
+font-size:14px;
+line-height:1.8;
+color:#555a54;
+max-width:300px
+}
+
+.projects{
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:80px 25px
+}
+
+.projects article:nth-child(2){
+margin-top:130px
+}
+
+.projects article:nth-child(3){
+grid-column:1/-1;
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:35px;
+align-items:end
+}
+
+.projects img{
+width:100%;
+display:block;
+transition:transform .6s
+}
+
+.projects article:hover img{
+transform:scale(.985)
+}
+
+.projects div{
+padding-top:18px;
+border-top:1px solid #bfc0ba
+}
+
+.projects div span{
+font-size:10px;
+color:#5f645e;
+letter-spacing:.13em
+}
+
+.projects h3{
+font:500 30px "Space Grotesk";
+margin:15px 0 8px;
+letter-spacing:-.04em
+}
+
+.projects p{
+font-size:16px;
+color:#50554f;
+line-height:1.8;
+max-width:380px;
+margin-top:10px
+}
+
+.process{
+padding:130px 7vw;
+background:#d5d3cc;
+display:grid;
+grid-template-columns:.8fr 1.2fr;
+gap:8vw
+}
+
+.process h2{
+margin-top:25px
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+border-top:1px solid #aaa
+}
+
+.steps article{
+padding:25px 18px 0 0;
+border-right:1px solid #aaa;
+margin-right:18px
+}
+
+.steps article:last-child{
+border:0
+}
+
+.steps b{
+font:13px "Space Grotesk"
+}
+
+.steps h3{
+font:500 22px "Space Grotesk";
+margin:50px 0 10px
+}
+
+.steps p{
+font-size:16px;
+color:#50554f;
+line-height:1.8;
+margin:0;
+max-width:250px
+}
+
+.contact{
+padding:150px 7vw;
+display:grid;
+grid-template-columns:130px 1fr;
+gap:30px
+}
+
+.contact h2{
+margin:0 0 50px
+}
+
+.contact a{
+font:500 clamp(35px,5vw,70px) "Space Grotesk";
+color:#171816;
+text-decoration:none;
+letter-spacing:-.06em;
+border-bottom:1px solid #171816
+}
+
+.contact a:hover{
+color:#555
+}
+
+footer{
+border-top:1px solid #cfcfc8;
+padding:27px 5vw;
+display:flex;
+justify-content:space-between;
+color:#5f645e;
+font-size:11px;
+letter-spacing:.1em
+}
+
+footer b{
+color:#171816
+}
+
+@media(max-width:800px){
+
+nav{display:none}
+
+.menu{display:block}
+
+.hero,
+.statement,
+.process,
+.contact{
+grid-template-columns:1fr
+}
+
+.hero-image{
+height:62vh
+}
+
+.hero-copy{
+padding:80px 8vw
+}
+
+.statement,
+.process,
+.contact,
+.work{
+padding:90px 8vw
+}
+
+.statement{
+gap:30px
+}
+
+.projects{
+grid-template-columns:1fr;
+gap:55px
+}
+
+.projects article:nth-child(2){
+margin-top:0
+}
+
+.projects article:nth-child(3){
+grid-column:auto;
+display:block
+}
+
+.steps{
+grid-template-columns:1fr
+}
+
+.steps article{
+border-right:0;
+border-bottom:1px solid #aaa;
+padding-bottom:25px;
+margin:0
+}
+
+.contact{
+gap:30px
+}
+
+footer{
+flex-wrap:wrap;
+gap:12px
+}
+
+.hero-copy p{
+font-size:17px;
+line-height:1.8
+}
+
+.statement div{
+font-size:16px;
+line-height:1.8
+}
+
+.work-head{
+display:block
+}
+
+.work-head p{
+font-size:15px;
+margin-top:0;
+margin-bottom:40px
+}
+
+.projects p{
+font-size:16px;
+line-height:1.75
+}
+
+.steps p{
+font-size:16px;
+line-height:1.75
+}
+
+.hero-copy>span,
+.statement>span,
+.work-head span,
+.process>div>span,
+.contact>span{
+font-size:10px
+}
+
+}
+
+/* =========================================================
+   RESPONSIVE GENERAL — VANTA / CASA LUME / ÓRBITA
+   Pegar AL FINAL de cada CSS
+   ========================================================= */
+
+
+/* =========================================================
+   TABLETS GRANDES / LAPTOPS
+   1100px ↓
+   ========================================================= */
+
+@media (max-width:1100px){
+
+  /* ---------- GENERAL ---------- */
+
+  body{
+    overflow-x:hidden;
+  }
+
+  img{
+    max-width:100%;
+    height:auto;
+  }
+
+  /* ---------- VANTA ---------- */
+
+  .hero{
+    grid-template-columns:1fr 1fr;
+    gap:4vw;
+  }
+
+  .hero-copy{
+    padding:9vw 5vw;
+  }
+
+  .hero h1{
+    font-size:clamp(55px,7vw,90px);
+  }
+
+  .statement{
+    padding:110px 7vw;
+    grid-template-columns:110px 1.2fr 1fr;
+  }
+
+  .work{
+    padding:110px 6vw;
+  }
+
+  .projects{
+    gap:60px 20px;
+  }
+
+  .process{
+    padding:110px 6vw;
+    gap:5vw;
+  }
+
+  .contact{
+    padding:110px 6vw;
+  }
+
+
+  /* ---------- CASA LUME ---------- */
+
+  .hero-copy{
+    padding:9vw 6vw;
+  }
+
+  .hero h1{
+    font-size:clamp(52px,7vw,90px);
+  }
+
+  .manifesto,
+  .booking{
+    gap:7vw;
+  }
+
+  .menu,
+  .space{
+    padding-left:7vw;
+    padding-right:7vw;
+  }
+
+  .dish-grid article{
+    padding-right:30px;
+  }
+
+  .dish-grid article:nth-child(even){
+    padding-left:30px;
+  }
+
+
+  /* ---------- ÓRBITA ---------- */
+
+  .hero{
+    padding-left:5vw;
+    padding-right:5vw;
+    gap:4vw;
+  }
+
+  .hero-copy>p{
+    max-width:440px;
+  }
+
+  .section{
+    padding-left:5vw;
+    padding-right:5vw;
+  }
+
+  .dark-panel{
+    padding-left:7vw;
+    padding-right:7vw;
+  }
+
+  .numbers{
+    padding-left:5vw;
+    padding-right:5vw;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   800px ↓
+   ========================================================= */
+
+@media (max-width:800px){
+
+  /* ---------- GENERAL ---------- */
+
+  html,
+  body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  p{
+    max-width:100%;
+  }
+
+  a,
+  button,
+  input,
+  select{
+    -webkit-tap-highlight-color:transparent;
+  }
+
+
+  /* =======================================================
+     VANTA
+     ======================================================= */
+
+  header{
+    height:72px;
+    padding:0 6vw;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .menu{
+    display:block;
+    cursor:pointer;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    min-height:auto;
+  }
+
+  .hero-image{
+    height:62vh;
+    min-height:420px;
+  }
+
+  .hero-copy{
+    padding:75px 8vw 90px;
+  }
+
+  .hero h1{
+    font-size:clamp(58px,13vw,86px);
+    line-height:.86;
+    margin:28px 0 35px;
+  }
+
+  .hero-copy p{
+    font-size:17px;
+    line-height:1.8;
+    max-width:600px;
+  }
+
+  .hero-copy>a{
+    font-size:12px;
+    padding-bottom:9px;
+  }
+
+  .hero-caption{
+    font-size:10px;
+  }
+
+  .statement{
+    padding:90px 8vw;
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .statement h2{
+    font-size:clamp(50px,12vw,78px);
+  }
+
+  .statement div{
+    font-size:16px;
+    line-height:1.85;
+    max-width:600px;
+  }
+
+  .work{
+    padding:90px 8vw;
+  }
+
+  .work-head{
+    display:block;
+  }
+
+  .work-head h2{
+    margin-bottom:30px;
+  }
+
+  .work-head p{
+    font-size:15px;
+    line-height:1.8;
+    max-width:500px;
+  }
+
+  .projects{
+    grid-template-columns:1fr;
+    gap:60px;
+  }
+
+  .projects article:nth-child(2){
+    margin-top:0;
+  }
+
+  .projects article:nth-child(3){
+    grid-column:auto;
+    display:block;
+  }
+
+  .projects h3{
+    font-size:27px;
+  }
+
+  .projects p{
+    font-size:16px;
+    line-height:1.8;
+    max-width:600px;
+  }
+
+  .process{
+    padding:90px 8vw;
+    grid-template-columns:1fr;
+    gap:55px;
+  }
+
+  .process h2{
+    margin-bottom:0;
+  }
+
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .steps article{
+    border-right:0;
+    border-bottom:1px solid #aaa;
+    padding:28px 0 35px;
+    margin:0;
+  }
+
+  .steps article:last-child{
+    border-bottom:0;
+  }
+
+  .steps h3{
+    margin:25px 0 12px;
+  }
+
+  .steps p{
+    font-size:16px;
+    line-height:1.8;
+    max-width:600px;
+  }
+
+  .contact{
+    padding:90px 8vw;
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .contact h2{
+    font-size:clamp(50px,12vw,82px);
+    margin-bottom:35px;
+  }
+
+  .contact a{
+    font-size:clamp(30px,7vw,55px);
+    word-break:break-word;
+  }
+
+
+  /* =======================================================
+     CASA LUME
+     ======================================================= */
+
+  header{
+    min-height:70px;
+  }
+
+  .logo{
+    font-size:18px;
+  }
+
+  .reserve,
+  nav{
+    display:none;
+  }
+
+  .hamb{
+    display:block;
+    cursor:pointer;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    min-height:auto;
+  }
+
+  .hero-image{
+    min-height:55vh;
+    height:55vh;
+  }
+
+  .hero-copy{
+    padding:75px 8vw 90px;
+  }
+
+  .hero h1{
+    font-size:clamp(55px,13vw,85px);
+    line-height:.9;
+    margin:28px 0 35px;
+  }
+
+  .hero-copy>p:not(.eyebrow){
+    font-size:17px;
+    line-height:1.85;
+    max-width:600px;
+  }
+
+  .hero-image span{
+    font-size:10px;
+  }
+
+  .line-btn{
+    font-size:12px;
+    padding:13px 17px;
+  }
+
+  .manifesto{
+    padding:90px 8vw;
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .manifesto h2{
+    font-size:clamp(50px,12vw,80px);
+  }
+
+  .manifesto-copy{
+    font-size:17px;
+    line-height:1.9;
+    max-width:600px;
+  }
+
+  .manifesto-copy span{
+    font-size:10px;
+  }
+
+  .menu{
+    padding:90px 8vw;
+  }
+
+  .menu-head{
+    display:block;
+    padding-bottom:30px;
+  }
+
+  .menu-head h2{
+    font-size:clamp(50px,12vw,80px);
+  }
+
+  .menu-head p{
+    margin-top:25px;
+    font-size:15px;
+    line-height:1.8;
+    max-width:500px;
+  }
+
+  .dish-grid{
+    grid-template-columns:1fr;
+  }
+
+  .dish-grid article{
+    padding:35px 0;
+  }
+
+  .dish-grid article:nth-child(even){
+    padding-left:0;
+    border-left:0;
+  }
+
+  .dish-grid article>span{
+    font-size:10px;
+  }
+
+  .dish-grid h3{
+    font-size:25px;
+  }
+
+  .dish-grid p{
+    font-size:16px;
+    line-height:1.8;
+    max-width:600px;
+  }
+
+  .dish-grid b{
+    font-size:13px;
+  }
+
+  .space{
+    padding:90px 8vw;
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .space-copy p{
+    font-size:16px;
+    line-height:1.85;
+    max-width:600px;
+  }
+
+  .booking{
+    padding:90px 8vw;
+    grid-template-columns:1fr;
+    gap:55px;
+  }
+
+  .booking h2{
+    font-size:clamp(50px,12vw,80px);
+  }
+
+  .booking>div p{
+    font-size:16px;
+    line-height:1.85;
+    max-width:600px;
+    margin-top:30px;
+  }
+
+  .booking label{
+    font-size:11px;
+  }
+
+  .booking input,
+  .booking select{
+    font-size:16px;
+    padding:14px 0;
+  }
+
+  .booking button{
+    font-size:12px;
+    padding:15px;
+  }
+
+  footer{
+    padding:25px 6vw;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+
+
+  /* =======================================================
+     ÓRBITA
+     ======================================================= */
+
+  .nav{
+    height:72px;
+    padding:0 6vw;
+  }
+
+  .nav nav,
+  .nav-cta{
+    display:none;
+  }
+
+  .menu{
+    display:block;
+    cursor:pointer;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    min-height:auto;
+    padding:75px 7vw 90px;
+  }
+
+  .hero-art{
+    order:-1;
+    width:100%;
+    max-width:650px;
+    margin:0 auto 30px;
+  }
+
+  .hero h1{
+    font-size:clamp(60px,14vw,90px);
+    line-height:.84;
+    margin:28px 0 35px;
+  }
+
+  .hero-copy>p{
+    font-size:17px;
+    line-height:1.85;
+    max-width:600px;
+  }
+
+  .hero-actions{
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:30px;
+  }
+
+  .nav-cta,
+  .button{
+    font-size:12px;
+    padding:13px 17px;
+  }
+
+  .trust{
+    flex-direction:column;
+    gap:9px;
+    margin-top:40px;
+    font-size:12px;
+  }
+
+  .section{
+    padding:90px 7vw;
+  }
+
+  .section-intro h2,
+  .dark-panel h2,
+  .numbers h2,
+  .cta-section h2{
+    font-size:clamp(50px,12vw,80px);
+    line-height:.88;
+    margin:25px 0 55px;
+  }
+
+  .feature-grid{
+    grid-template-columns:1fr;
+  }
+
+  .feature-grid article{
+    border-right:0;
+    border-bottom:1px solid #d4d7d0;
+    margin-right:0;
+    padding:35px 0 40px;
+  }
+
+  .feature-grid article:last-child{
+    border-bottom:0;
+  }
+
+  .feature-grid p{
+    font-size:16px;
+    line-height:1.8;
+    max-width:600px;
+  }
+
+  .dark-panel{
+    padding:90px 8vw;
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+
+  .dark-panel p{
+    font-size:16px;
+    line-height:1.85;
+    max-width:600px;
+  }
+
+  .dark-panel img{
+    border-radius:14px;
+  }
+
+  .numbers{
+    padding:90px 7vw;
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .number-grid{
+    grid-template-columns:1fr;
+    margin-top:0;
+  }
+
+  .number-grid div{
+    padding:25px 0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .number-grid strong{
+    font-size:48px;
+  }
+
+  .number-grid span{
+    font-size:13px;
+    line-height:1.6;
+  }
+
+  .cta-section{
+    padding:100px 7vw;
+  }
+
+  .cta-section h2{
+    margin-bottom:35px;
+  }
+
+  footer{
+    padding:25px 6vw;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+   600px ↓
+   ========================================================= */
+
+@media (max-width:600px){
+
+  /* ---------- GENERAL ---------- */
+
+  body{
+    font-size:16px;
+  }
+
+  button,
+  .button,
+  .line-btn,
+  .nav-cta{
+    min-height:46px;
+  }
+
+  /* evitar títulos pegados a los bordes */
+
+  h1,
+  h2{
+    max-width:100%;
+  }
+
+
+  /* ---------- VANTA ---------- */
+
+  header{
+    padding:0 6vw;
+  }
+
+  .hero-image{
+    height:55vh;
+    min-height:360px;
+  }
+
+  .hero-copy{
+    padding:65px 7vw 75px;
+  }
+
+  .hero h1{
+    font-size:clamp(52px,15vw,72px);
+  }
+
+  .hero-copy p{
+    font-size:16px;
+  }
+
+  .statement,
+  .work,
+  .process,
+  .contact{
+    padding-left:7vw;
+    padding-right:7vw;
+  }
+
+  .statement h2,
+  .work-head h2,
+  .process h2,
+  .contact h2{
+    font-size:clamp(48px,14vw,68px);
+  }
+
+  .projects img{
+    width:100%;
+  }
+
+  .projects h3{
+    font-size:25px;
+  }
+
+  .projects p,
+  .steps p{
+    font-size:16px;
+  }
+
+  .contact a{
+    font-size:clamp(28px,8vw,44px);
+  }
+
+
+  /* ---------- CASA LUME ---------- */
+
+  .hero-image{
+    min-height:50vh;
+    height:50vh;
+  }
+
+  .hero-copy{
+    padding:65px 7vw 75px;
+  }
+
+  .hero h1{
+    font-size:clamp(50px,15vw,72px);
+  }
+
+  .hero-copy>p:not(.eyebrow){
+    font-size:16px;
+  }
+
+  .manifesto,
+  .menu,
+  .space,
+  .booking{
+    padding-left:7vw;
+    padding-right:7vw;
+  }
+
+  .manifesto h2,
+  .menu-head h2,
+  .space h2,
+  .booking h2{
+    font-size:clamp(48px,14vw,70px);
+  }
+
+  .manifesto-copy{
+    font-size:16px;
+  }
+
+  .dish-grid p{
+    font-size:16px;
+  }
+
+  .space-copy p{
+    font-size:16px;
+  }
+
+  .booking>div p{
+    font-size:16px;
+  }
+
+
+  /* ---------- ÓRBITA ---------- */
+
+  .nav{
+    padding:0 6vw;
+  }
+
+  .hero{
+    padding:60px 7vw 75px;
+  }
+
+  .hero-art{
+    margin-bottom:20px;
+  }
+
+  .hero h1{
+    font-size:clamp(52px,15vw,74px);
+  }
+
+  .hero-copy>p{
+    font-size:16px;
+  }
+
+  .section,
+  .numbers{
+    padding-left:7vw;
+    padding-right:7vw;
+  }
+
+  .section-intro h2,
+  .dark-panel h2,
+  .numbers h2,
+  .cta-section h2{
+    font-size:clamp(48px,14vw,70px);
+  }
+
+  .feature-grid p{
+    font-size:16px;
+  }
+
+  .dark-panel{
+    padding-left:7vw;
+    padding-right:7vw;
+  }
+
+  .dark-panel p{
+    font-size:16px;
+  }
+
+  .number-grid strong{
+    font-size:44px;
+  }
+
+  .cta-section{
+    padding-left:7vw;
+    padding-right:7vw;
+  }
+
+}
+
+
+/* =========================================================
+   MÓVIL PEQUEÑO
+   390px ↓
+   ========================================================= */
+
+@media (max-width:390px){
+
+  /* ---------- GENERAL ---------- */
+
+  .button,
+  .line-btn{
+    width:100%;
+    text-align:center;
+  }
+
+  .button b,
+  .line-btn b{
+    margin-left:15px;
+  }
+
+
+  /* ---------- VANTA ---------- */
+
+  .hero h1{
+    font-size:50px;
+  }
+
+  .hero-image{
+    min-height:330px;
+  }
+
+  .statement h2,
+  .work-head h2,
+  .process h2,
+  .contact h2{
+    font-size:47px;
+  }
+
+  .projects h3{
+    font-size:23px;
+  }
+
+  .contact a{
+    font-size:27px;
+  }
+
+
+  /* ---------- CASA LUME ---------- */
+
+  .hero h1{
+    font-size:49px;
+  }
+
+  .manifesto h2,
+  .menu-head h2,
+  .space h2,
+  .booking h2{
+    font-size:46px;
+  }
+
+  .dish-grid h3{
+    font-size:23px;
+  }
+
+
+  /* ---------- ÓRBITA ---------- */
+
+  .hero h1{
+    font-size:50px;
+  }
+
+  .section-intro h2,
+  .dark-panel h2,
+  .numbers h2,
+  .cta-section h2{
+    font-size:46px;
+  }
+
+  .number-grid strong{
+    font-size:40px;
+  }
+
+}
+
+
+/* =========================================================
+   MÓVIL MUY PEQUEÑO
+   340px ↓
+   ========================================================= */
+
+@media (max-width:340px){
+
+  .hero h1{
+    font-size:44px;
+  }
+
+  .hero-copy>p,
+  .hero-copy p,
+  .statement div,
+  .projects p,
+  .steps p,
+  .manifesto-copy,
+  .dish-grid p,
+  .space-copy p,
+  .booking>div p,
+  .feature-grid p,
+  .dark-panel p{
+    font-size:15px;
+    line-height:1.75;
+  }
+
+  .statement h2,
+  .work-head h2,
+  .process h2,
+  .contact h2,
+  .manifesto h2,
+  .menu-head h2,
+  .space h2,
+  .booking h2,
+  .section-intro h2,
+  .dark-panel h2,
+  .numbers h2,
+  .cta-section h2{
+    font-size:42px;
+  }
+
+}
+
+
+/* =========================================================
+   LANDSCAPE — CELULARES HORIZONTALES
+   ========================================================= */
+
+@media (max-height:600px) and (orientation:landscape){
+
+  .hero-image{
+    min-height:450px;
+    height:90vh;
+  }
+
+  .hero{
+    min-height:auto;
+  }
+
+  .hero-copy{
+    padding-top:60px;
+    padding-bottom:70px;
+  }
+
+  .hero-art{
+    max-height:75vh;
+  }
+
+}

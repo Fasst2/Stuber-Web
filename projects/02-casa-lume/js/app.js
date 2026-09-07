@@ -1,0 +1,1 @@
+document.querySelector('.hamb')?.addEventListener('click',()=>document.querySelector('nav')?.classList.toggle('open'));document.querySelector('form')?.addEventListener('submit',e=>e.currentTarget.querySelector('button').disabled=true);

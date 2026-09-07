@@ -1,0 +1,1414 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+background:#eee9df;
+color:#211d18;
+font-family:"DM Sans",sans-serif
+}
+
+header{
+height:82px;
+padding:0 5vw;
+display:flex;
+align-items:center;
+gap:45px;
+border-bottom:1px solid #d8d0c2;
+position:sticky;
+top:0;
+background:#eee9dfec;
+backdrop-filter:blur(12px);
+z-index:5
+}
+
+.logo{
+font:600 19px "Playfair Display";
+letter-spacing:.13em;
+color:#211d18;
+text-decoration:none;
+margin-right:auto
+}
+
+.logo i{
+font-style:italic;
+color:#9a6537
+}
+
+nav{
+display:flex;
+gap:28px
+}
+
+nav a{
+color:#514b44;
+text-decoration:none;
+font-size:12px
+}
+
+.reserve,
+.line-btn{
+color:#eee9df;
+background:#211d18;
+text-decoration:none;
+padding:12px 17px;
+font-size:11px
+}
+
+.hamb{
+display:none;
+background:none;
+border:0
+}
+
+.hero{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+min-height:calc(100vh - 82px)
+}
+
+.hero-image{
+position:relative;
+min-height:650px;
+overflow:hidden
+}
+
+.hero-image img{
+width:100%;
+height:100%;
+object-fit:cover
+}
+
+.hero-image span{
+position:absolute;
+bottom:30px;
+left:35px;
+color:#eee9df;
+font-size:10px;
+letter-spacing:.13em
+}
+
+.hero-copy{
+padding:12vw 8vw;
+display:flex;
+flex-direction:column;
+align-items:flex-start
+}
+
+.eyebrow,
+.manifesto>div>span,
+.menu-head>div>span,
+.space-copy>span,
+.booking>div>span{
+font-size:10px;
+letter-spacing:.18em;
+color:#71675c
+}
+
+.hero h1,
+h2{
+font:500 clamp(55px,7vw,100px)/.88 "Playfair Display";
+letter-spacing:-.04em;
+margin:35px 0
+}
+
+.hero h1 i,
+h2 i{
+color:#9a6537
+}
+
+.hero-copy>p:not(.eyebrow){
+max-width:430px;
+color:#514b44;
+line-height:1.85;
+font-size:18px
+}
+
+.line-btn{
+margin-top:35px
+}
+
+.line-btn b{
+margin-left:30px
+}
+
+.manifesto{
+padding:135px 9vw;
+background:#dcd2c3;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10vw
+}
+
+.manifesto h2,
+.space h2,
+.booking h2{
+margin-bottom:0
+}
+
+.manifesto-copy{
+align-self:end;
+max-width:490px;
+color:#514b44;
+line-height:1.9;
+font-size:18px
+}
+
+.manifesto-copy span{
+display:block;
+margin-top:40px;
+font-size:11px;
+letter-spacing:.16em;
+color:#74695c
+}
+
+.menu{
+padding:135px 9vw
+}
+
+.menu-head{
+display:flex;
+justify-content:space-between;
+align-items:end;
+border-bottom:1px solid #cfc5b7;
+padding-bottom:35px
+}
+
+.menu-head h2{
+margin-bottom:0
+}
+
+.menu-head p{
+font-size:14px;
+letter-spacing:.05em;
+line-height:1.8;
+color:#5b554e;
+max-width:320px
+}
+
+.dish-grid{
+display:grid;
+grid-template-columns:1fr 1fr
+}
+
+.dish-grid article{
+padding:42px 50px 42px 0;
+border-bottom:1px solid #cfc5b7
+}
+
+.dish-grid article:nth-child(even){
+padding-left:45px;
+border-left:1px solid #cfc5b7
+}
+
+.dish-grid article>span{
+font-size:10px;
+letter-spacing:.15em;
+color:#9a6537
+}
+
+.dish-grid h3{
+font:500 26px "Playfair Display";
+margin:22px 0 8px
+}
+
+.dish-grid p{
+font-size:16px;
+color:#514b44;
+line-height:1.75;
+margin:0
+}
+
+.dish-grid b{
+font:13px "DM Sans";
+display:block;
+margin-top:22px
+}
+
+.space{
+padding:130px 9vw;
+background:#211d18;
+color:#eee9df;
+display:grid;
+grid-template-columns:.75fr 1.25fr;
+gap:8vw;
+align-items:center
+}
+
+.space-copy p{
+color:#c3bbb1;
+line-height:1.85;
+font-size:17px;
+max-width:370px
+}
+
+.space-image img{
+width:100%;
+display:block
+}
+
+.space-copy>span{
+color:#b9a999
+}
+
+.booking{
+padding:135px 9vw;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10vw
+}
+
+.booking>div p{
+color:#514b44;
+font-size:17px;
+line-height:1.85;
+margin-top:45px;
+max-width:480px
+}
+
+.booking form{
+display:grid;
+gap:20px;
+align-content:center
+}
+
+.booking label{
+font-size:11px;
+letter-spacing:.1em;
+color:#665e55
+}
+
+.booking input,
+.booking select{
+display:block;
+width:100%;
+margin-top:7px;
+padding:12px 0;
+background:none;
+border:0;
+border-bottom:1px solid #c5bbae;
+outline:0;
+color:#211d18;
+font-size:16px
+}
+
+.booking button{
+border:0;
+background:#211d18;
+color:#eee9df;
+padding:14px;
+text-align:left;
+cursor:pointer;
+font-size:12px
+}
+
+.booking button b{
+float:right
+}
+
+.booking small{
+color:#9a6537;
+font-size:11px
+}
+
+footer{
+padding:28px 5vw;
+border-top:1px solid #d8d0c2;
+display:flex;
+justify-content:space-between;
+font-size:10px;
+letter-spacing:.08em;
+color:#665e55
+}
+
+footer .logo{
+margin:0;
+color:#4d463f
+}
+
+@media(max-width:750px){
+
+header{
+height:70px
+}
+
+.reserve,
+nav{
+display:none
+}
+
+.hamb{
+display:block
+}
+
+.hero,
+.manifesto,
+.space,
+.booking{
+grid-template-columns:1fr
+}
+
+.hero-image{
+min-height:58vh
+}
+
+.hero-copy{
+padding:80px 8vw
+}
+
+.manifesto,
+.menu,
+.space,
+.booking{
+padding:90px 8vw
+}
+
+.dish-grid{
+grid-template-columns:1fr
+}
+
+.dish-grid article:nth-child(even){
+padding-left:0;
+border-left:0
+}
+
+.menu-head{
+display:block
+}
+
+.menu-head p{
+margin-top:25px;
+font-size:15px
+}
+
+.hero-copy>p:not(.eyebrow){
+font-size:17px;
+line-height:1.8
+}
+
+.manifesto-copy{
+font-size:17px;
+line-height:1.8
+}
+
+.dish-grid p{
+font-size:16px;
+line-height:1.75
+}
+
+.space-copy p{
+font-size:16px;
+line-height:1.8
+}
+
+.booking>div p{
+font-size:16px;
+line-height:1.8
+}
+
+footer{
+flex-wrap:wrap;
+gap:14px
+}
+
+}
+
+/* =========================================================
+   RESPONSIVE GENERAL — VANTA / CASA LUME / ÓRBITA
+   Pegar AL FINAL de cada CSS
+   ========================================================= */
+
+
+/* =========================================================
+   TABLETS GRANDES / LAPTOPS
+   1100px ↓
+   ========================================================= */
+
+@media (max-width:1100px){
+
+  /* ---------- GENERAL ---------- */
+
+  body{
+    overflow-x:hidden;
+  }
+
+  img{
+    max-width:100%;
+    height:auto;
+  }
+
+  /* ---------- VANTA ---------- */
+
+  .hero{
+    grid-template-columns:1fr 1fr;
+    gap:4vw;
+  }
+
+  .hero-copy{
+    padding:9vw 5vw;
+  }
+
+  .hero h1{
+    font-size:clamp(55px,7vw,90px);
+  }
+
+  .statement{
+    padding:110px 7vw;
+    grid-template-columns:110px 1.2fr 1fr;
+  }
+
+  .work{
+    padding:110px 6vw;
+  }
+
+  .projects{
+    gap:60px 20px;
+  }
+
+  .process{
+    padding:110px 6vw;
+    gap:5vw;
+  }
+
+  .contact{
+    padding:110px 6vw;
+  }
+
+
+  /* ---------- CASA LUME ---------- */
+
+  .hero-copy{
+    padding:9vw 6vw;
+  }
+
+  .hero h1{
+    font-size:clamp(52px,7vw,90px);
+  }
+
+  .manifesto,
+  .booking{
+    gap:7vw;
+  }
+
+  .menu,
+  .space{
+    padding-left:7vw;
+    padding-right:7vw;
+  }
+
+  .dish-grid article{
+    padding-right:30px;
+  }
+
+  .dish-grid article:nth-child(even){
+    padding-left:30px;
+  }
+
+
+  /* ---------- ÓRBITA ---------- */
+
+  .hero{
+    padding-left:5vw;
+    padding-right:5vw;
+    gap:4vw;
+  }
+
+  .hero-copy>p{
+    max-width:440px;
+  }
+
+  .section{
+    padding-left:5vw;
+    padding-right:5vw;
+  }
+
+  .dark-panel{
+    padding-left:7vw;
+    padding-right:7vw;
+  }
+
+  .numbers{
+    padding-left:5vw;
+    padding-right:5vw;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   800px ↓
+   ========================================================= */
+
+@media (max-width:800px){
+
+  /* ---------- GENERAL ---------- */
+
+  html,
+  body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  p{
+    max-width:100%;
+  }
+
+  a,
+  button,
+  input,
+  select{
+    -webkit-tap-highlight-color:transparent;
+  }
+
+
+  /* =======================================================
+     VANTA
+     ======================================================= */
+
+  header{
+    height:72px;
+    padding:0 6vw;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .menu{
+    display:block;
+    cursor:pointer;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    min-height:auto;
+  }
+
+  .hero-image{
+    height:62vh;
+    min-height:420px;
+  }
+
+  .hero-copy{
+    padding:75px 8vw 90px;
+  }
+
+  .hero h1{
+    font-size:clamp(58px,13vw,86px);
+    line-height:.86;
+    margin:28px 0 35px;
+  }
+
+  .hero-copy p{
+    font-size:17px;
+    line-height:1.8;
+    max-width:600px;
+  }
+
+  .hero-copy>a{
+    font-size:12px;
+    padding-bottom:9px;
+  }
+
+  .hero-caption{
+    font-size:10px;
+  }
+
+  .statement{
+    padding:90px 8vw;
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .statement h2{
+    font-size:clamp(50px,12vw,78px);
+  }
+
+  .statement div{
+    font-size:16px;
+    line-height:1.85;
+    max-width:600px;
+  }
+
+  .work{
+    padding:90px 8vw;
+  }
+
+  .work-head{
+    display:block;
+  }
+
+  .work-head h2{
+    margin-bottom:30px;
+  }
+
+  .work-head p{
+    font-size:15px;
+    line-height:1.8;
+    max-width:500px;
+  }
+
+  .projects{
+    grid-template-columns:1fr;
+    gap:60px;
+  }
+
+  .projects article:nth-child(2){
+    margin-top:0;
+  }
+
+  .projects article:nth-child(3){
+    grid-column:auto;
+    display:block;
+  }
+
+  .projects h3{
+    font-size:27px;
+  }
+
+  .projects p{
+    font-size:16px;
+    line-height:1.8;
+    max-width:600px;
+  }
+
+  .process{
+    padding:90px 8vw;
+    grid-template-columns:1fr;
+    gap:55px;
+  }
+
+  .process h2{
+    margin-bottom:0;
+  }
+
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .steps article{
+    border-right:0;
+    border-bottom:1px solid #aaa;
+    padding:28px 0 35px;
+    margin:0;
+  }
+
+  .steps article:last-child{
+    border-bottom:0;
+  }
+
+  .steps h3{
+    margin:25px 0 12px;
+  }
+
+  .steps p{
+    font-size:16px;
+    line-height:1.8;
+    max-width:600px;
+  }
+
+  .contact{
+    padding:90px 8vw;
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .contact h2{
+    font-size:clamp(50px,12vw,82px);
+    margin-bottom:35px;
+  }
+
+  .contact a{
+    font-size:clamp(30px,7vw,55px);
+    word-break:break-word;
+  }
+
+
+  /* =======================================================
+     CASA LUME
+     ======================================================= */
+
+  header{
+    min-height:70px;
+  }
+
+  .logo{
+    font-size:18px;
+  }
+
+  .reserve,
+  nav{
+    display:none;
+  }
+
+  .hamb{
+    display:block;
+    cursor:pointer;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    min-height:auto;
+  }
+
+  .hero-image{
+    min-height:55vh;
+    height:55vh;
+  }
+
+  .hero-copy{
+    padding:75px 8vw 90px;
+  }
+
+  .hero h1{
+    font-size:clamp(55px,13vw,85px);
+    line-height:.9;
+    margin:28px 0 35px;
+  }
+
+  .hero-copy>p:not(.eyebrow){
+    font-size:17px;
+    line-height:1.85;
+    max-width:600px;
+  }
+
+  .hero-image span{
+    font-size:10px;
+  }
+
+  .line-btn{
+    font-size:12px;
+    padding:13px 17px;
+  }
+
+  .manifesto{
+    padding:90px 8vw;
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .manifesto h2{
+    font-size:clamp(50px,12vw,80px);
+  }
+
+  .manifesto-copy{
+    font-size:17px;
+    line-height:1.9;
+    max-width:600px;
+  }
+
+  .manifesto-copy span{
+    font-size:10px;
+  }
+
+  .menu{
+    padding:90px 8vw;
+  }
+
+  .menu-head{
+    display:block;
+    padding-bottom:30px;
+  }
+
+  .menu-head h2{
+    font-size:clamp(50px,12vw,80px);
+  }
+
+  .menu-head p{
+    margin-top:25px;
+    font-size:15px;
+    line-height:1.8;
+    max-width:500px;
+  }
+
+  .dish-grid{
+    grid-template-columns:1fr;
+  }
+
+  .dish-grid article{
+    padding:35px 0;
+  }
+
+  .dish-grid article:nth-child(even){
+    padding-left:0;
+    border-left:0;
+  }
+
+  .dish-grid article>span{
+    font-size:10px;
+  }
+
+  .dish-grid h3{
+    font-size:25px;
+  }
+
+  .dish-grid p{
+    font-size:16px;
+    line-height:1.8;
+    max-width:600px;
+  }
+
+  .dish-grid b{
+    font-size:13px;
+  }
+
+  .space{
+    padding:90px 8vw;
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .space-copy p{
+    font-size:16px;
+    line-height:1.85;
+    max-width:600px;
+  }
+
+  .booking{
+    padding:90px 8vw;
+    grid-template-columns:1fr;
+    gap:55px;
+  }
+
+  .booking h2{
+    font-size:clamp(50px,12vw,80px);
+  }
+
+  .booking>div p{
+    font-size:16px;
+    line-height:1.85;
+    max-width:600px;
+    margin-top:30px;
+  }
+
+  .booking label{
+    font-size:11px;
+  }
+
+  .booking input,
+  .booking select{
+    font-size:16px;
+    padding:14px 0;
+  }
+
+  .booking button{
+    font-size:12px;
+    padding:15px;
+  }
+
+  footer{
+    padding:25px 6vw;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+
+
+  /* =======================================================
+     ÓRBITA
+     ======================================================= */
+
+  .nav{
+    height:72px;
+    padding:0 6vw;
+  }
+
+  .nav nav,
+  .nav-cta{
+    display:none;
+  }
+
+  .menu{
+    display:block;
+    cursor:pointer;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    min-height:auto;
+    padding:75px 7vw 90px;
+  }
+
+  .hero-art{
+    order:-1;
+    width:100%;
+    max-width:650px;
+    margin:0 auto 30px;
+  }
+
+  .hero h1{
+    font-size:clamp(60px,14vw,90px);
+    line-height:.84;
+    margin:28px 0 35px;
+  }
+
+  .hero-copy>p{
+    font-size:17px;
+    line-height:1.85;
+    max-width:600px;
+  }
+
+  .hero-actions{
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:30px;
+  }
+
+  .nav-cta,
+  .button{
+    font-size:12px;
+    padding:13px 17px;
+  }
+
+  .trust{
+    flex-direction:column;
+    gap:9px;
+    margin-top:40px;
+    font-size:12px;
+  }
+
+  .section{
+    padding:90px 7vw;
+  }
+
+  .section-intro h2,
+  .dark-panel h2,
+  .numbers h2,
+  .cta-section h2{
+    font-size:clamp(50px,12vw,80px);
+    line-height:.88;
+    margin:25px 0 55px;
+  }
+
+  .feature-grid{
+    grid-template-columns:1fr;
+  }
+
+  .feature-grid article{
+    border-right:0;
+    border-bottom:1px solid #d4d7d0;
+    margin-right:0;
+    padding:35px 0 40px;
+  }
+
+  .feature-grid article:last-child{
+    border-bottom:0;
+  }
+
+  .feature-grid p{
+    font-size:16px;
+    line-height:1.8;
+    max-width:600px;
+  }
+
+  .dark-panel{
+    padding:90px 8vw;
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+
+  .dark-panel p{
+    font-size:16px;
+    line-height:1.85;
+    max-width:600px;
+  }
+
+  .dark-panel img{
+    border-radius:14px;
+  }
+
+  .numbers{
+    padding:90px 7vw;
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .number-grid{
+    grid-template-columns:1fr;
+    margin-top:0;
+  }
+
+  .number-grid div{
+    padding:25px 0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .number-grid strong{
+    font-size:48px;
+  }
+
+  .number-grid span{
+    font-size:13px;
+    line-height:1.6;
+  }
+
+  .cta-section{
+    padding:100px 7vw;
+  }
+
+  .cta-section h2{
+    margin-bottom:35px;
+  }
+
+  footer{
+    padding:25px 6vw;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+   600px ↓
+   ========================================================= */
+
+@media (max-width:600px){
+
+  /* ---------- GENERAL ---------- */
+
+  body{
+    font-size:16px;
+  }
+
+  button,
+  .button,
+  .line-btn,
+  .nav-cta{
+    min-height:46px;
+  }
+
+  /* evitar títulos pegados a los bordes */
+
+  h1,
+  h2{
+    max-width:100%;
+  }
+
+
+  /* ---------- VANTA ---------- */
+
+  header{
+    padding:0 6vw;
+  }
+
+  .hero-image{
+    height:55vh;
+    min-height:360px;
+  }
+
+  .hero-copy{
+    padding:65px 7vw 75px;
+  }
+
+  .hero h1{
+    font-size:clamp(52px,15vw,72px);
+  }
+
+  .hero-copy p{
+    font-size:16px;
+  }
+
+  .statement,
+  .work,
+  .process,
+  .contact{
+    padding-left:7vw;
+    padding-right:7vw;
+  }
+
+  .statement h2,
+  .work-head h2,
+  .process h2,
+  .contact h2{
+    font-size:clamp(48px,14vw,68px);
+  }
+
+  .projects img{
+    width:100%;
+  }
+
+  .projects h3{
+    font-size:25px;
+  }
+
+  .projects p,
+  .steps p{
+    font-size:16px;
+  }
+
+  .contact a{
+    font-size:clamp(28px,8vw,44px);
+  }
+
+
+  /* ---------- CASA LUME ---------- */
+
+  .hero-image{
+    min-height:50vh;
+    height:50vh;
+  }
+
+  .hero-copy{
+    padding:65px 7vw 75px;
+  }
+
+  .hero h1{
+    font-size:clamp(50px,15vw,72px);
+  }
+
+  .hero-copy>p:not(.eyebrow){
+    font-size:16px;
+  }
+
+  .manifesto,
+  .menu,
+  .space,
+  .booking{
+    padding-left:7vw;
+    padding-right:7vw;
+  }
+
+  .manifesto h2,
+  .menu-head h2,
+  .space h2,
+  .booking h2{
+    font-size:clamp(48px,14vw,70px);
+  }
+
+  .manifesto-copy{
+    font-size:16px;
+  }
+
+  .dish-grid p{
+    font-size:16px;
+  }
+
+  .space-copy p{
+    font-size:16px;
+  }
+
+  .booking>div p{
+    font-size:16px;
+  }
+
+
+  /* ---------- ÓRBITA ---------- */
+
+  .nav{
+    padding:0 6vw;
+  }
+
+  .hero{
+    padding:60px 7vw 75px;
+  }
+
+  .hero-art{
+    margin-bottom:20px;
+  }
+
+  .hero h1{
+    font-size:clamp(52px,15vw,74px);
+  }
+
+  .hero-copy>p{
+    font-size:16px;
+  }
+
+  .section,
+  .numbers{
+    padding-left:7vw;
+    padding-right:7vw;
+  }
+
+  .section-intro h2,
+  .dark-panel h2,
+  .numbers h2,
+  .cta-section h2{
+    font-size:clamp(48px,14vw,70px);
+  }
+
+  .feature-grid p{
+    font-size:16px;
+  }
+
+  .dark-panel{
+    padding-left:7vw;
+    padding-right:7vw;
+  }
+
+  .dark-panel p{
+    font-size:16px;
+  }
+
+  .number-grid strong{
+    font-size:44px;
+  }
+
+  .cta-section{
+    padding-left:7vw;
+    padding-right:7vw;
+  }
+
+}
+
+
+/* =========================================================
+   MÓVIL PEQUEÑO
+   390px ↓
+   ========================================================= */
+
+@media (max-width:390px){
+
+  /* ---------- GENERAL ---------- */
+
+  .button,
+  .line-btn{
+    width:100%;
+    text-align:center;
+  }
+
+  .button b,
+  .line-btn b{
+    margin-left:15px;
+  }
+
+
+  /* ---------- VANTA ---------- */
+
+  .hero h1{
+    font-size:50px;
+  }
+
+  .hero-image{
+    min-height:330px;
+  }
+
+  .statement h2,
+  .work-head h2,
+  .process h2,
+  .contact h2{
+    font-size:47px;
+  }
+
+  .projects h3{
+    font-size:23px;
+  }
+
+  .contact a{
+    font-size:27px;
+  }
+
+
+  /* ---------- CASA LUME ---------- */
+
+  .hero h1{
+    font-size:49px;
+  }
+
+  .manifesto h2,
+  .menu-head h2,
+  .space h2,
+  .booking h2{
+    font-size:46px;
+  }
+
+  .dish-grid h3{
+    font-size:23px;
+  }
+
+
+  /* ---------- ÓRBITA ---------- */
+
+  .hero h1{
+    font-size:50px;
+  }
+
+  .section-intro h2,
+  .dark-panel h2,
+  .numbers h2,
+  .cta-section h2{
+    font-size:46px;
+  }
+
+  .number-grid strong{
+    font-size:40px;
+  }
+
+}
+
+
+/* =========================================================
+   MÓVIL MUY PEQUEÑO
+   340px ↓
+   ========================================================= */
+
+@media (max-width:340px){
+
+  .hero h1{
+    font-size:44px;
+  }
+
+  .hero-copy>p,
+  .hero-copy p,
+  .statement div,
+  .projects p,
+  .steps p,
+  .manifesto-copy,
+  .dish-grid p,
+  .space-copy p,
+  .booking>div p,
+  .feature-grid p,
+  .dark-panel p{
+    font-size:15px;
+    line-height:1.75;
+  }
+
+  .statement h2,
+  .work-head h2,
+  .process h2,
+  .contact h2,
+  .manifesto h2,
+  .menu-head h2,
+  .space h2,
+  .booking h2,
+  .section-intro h2,
+  .dark-panel h2,
+  .numbers h2,
+  .cta-section h2{
+    font-size:42px;
+  }
+
+}
+
+
+/* =========================================================
+   LANDSCAPE — CELULARES HORIZONTALES
+   ========================================================= */
+
+@media (max-height:600px) and (orientation:landscape){
+
+  .hero-image{
+    min-height:450px;
+    height:90vh;
+  }
+
+  .hero{
+    min-height:auto;
+  }
+
+  .hero-copy{
+    padding-top:60px;
+    padding-bottom:70px;
+  }
+
+  .hero-art{
+    max-height:75vh;
+  }
+
+}

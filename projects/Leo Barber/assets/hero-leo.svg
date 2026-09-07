@@ -1,0 +1,326 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1000">
+        <stop stop-color="#F2EDE5"/>
+        <stop offset="1" stop-color="#D8CEC1"/>
+    </linearGradient>
+
+    <linearGradient id="shirt" x1="650" y1="650" x2="1050" y2="900">
+        <stop stop-color="#202020"/>
+        <stop offset="1" stop-color="#080808"/>
+    </linearGradient>
+
+    <radialGradient id="skin">
+        <stop stop-color="#D6A47B"/>
+        <stop offset="1" stop-color="#9D6849"/>
+    </radialGradient>
+
+    <filter id="shadow">
+        <feDropShadow dx="0" dy="30" stdDeviation="35" flood-opacity=".18"/>
+    </filter>
+
+</defs>
+
+<!-- BACKGROUND -->
+
+<rect width="1600" height="1000" fill="url(#bg)"/>
+
+<!-- DECORATION -->
+
+<circle
+    cx="1250"
+    cy="230"
+    r="270"
+    fill="#B28A5B"
+    opacity=".09"
+/>
+
+<circle
+    cx="1370"
+    cy="780"
+    r="180"
+    fill="#B28A5B"
+    opacity=".08"
+/>
+
+<!-- BRAND -->
+
+<text
+    x="100"
+    y="125"
+    fill="#181614"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="28"
+    font-weight="700"
+    letter-spacing="8"
+>
+    LEO BARBER
+</text>
+
+<text
+    x="100"
+    y="165"
+    fill="#8A7968"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="16"
+    letter-spacing="4"
+>
+    BARBERÍA · POSADAS
+</text>
+
+<!-- HEADLINE -->
+
+<text
+    x="100"
+    y="310"
+    fill="#171513"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="72"
+    font-weight="700"
+>
+    TU CORTE.
+</text>
+
+<text
+    x="100"
+    y="390"
+    fill="#A37A4D"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="72"
+    font-weight="700"
+>
+    TU MOMENTO.
+</text>
+
+<!-- PORTRAIT -->
+
+<g filter="url(#shadow)">
+
+    <!-- SHIRT -->
+
+    <path
+        d="
+        M690 1000
+        C700 830 735 720 805 675
+        H1000
+        C1070 720 1110 830 1120 1000
+        Z
+        "
+        fill="url(#shirt)"
+    />
+
+    <!-- NECK -->
+
+    <path
+        d="
+        M850 635
+        V735
+        H970
+        V635
+        Z
+        "
+        fill="#A66D4B"
+    />
+
+    <!-- FACE -->
+
+    <ellipse
+        cx="910"
+        cy="480"
+        rx="175"
+        ry="215"
+        fill="url(#skin)"
+    />
+
+    <!-- HAIR -->
+
+    <path
+        d="
+        M735 470
+        C710 360 760 245 890 235
+        C1015 225 1090 315 1070 455
+        C1040 390 1010 360 970 350
+        C910 330 820 355 770 420
+        Z
+        "
+        fill="#171513"
+    />
+
+    <!-- HAIR FADE -->
+
+    <path
+        d="
+        M738 420
+        C730 350 770 300 810 275
+        C775 345 770 390 775 450
+        Z
+        "
+        fill="#332A24"
+        opacity=".8"
+    />
+
+    <!-- EAR -->
+
+    <ellipse
+        cx="735"
+        cy="500"
+        rx="30"
+        ry="48"
+        fill="#A66D4B"
+    />
+
+    <ellipse
+        cx="1085"
+        cy="500"
+        rx="30"
+        ry="48"
+        fill="#A66D4B"
+    />
+
+    <!-- BEARD -->
+
+    <path
+        d="
+        M780 535
+        C820 610 1000 630 1045 530
+        C1025 680 825 690 780 535Z
+        "
+        fill="#27211D"
+    />
+
+    <!-- MUSTACHE -->
+
+    <path
+        d="
+        M850 530
+        C880 510 940 510 970 530
+        C945 560 875 560 850 530Z
+        "
+        fill="#211B18"
+    />
+
+    <!-- EYES -->
+
+    <ellipse
+        cx="840"
+        cy="475"
+        rx="14"
+        ry="9"
+        fill="#171513"
+    />
+
+    <ellipse
+        cx="980"
+        cy="475"
+        rx="14"
+        ry="9"
+        fill="#171513"
+    />
+
+    <!-- NOSE -->
+
+    <path
+        d="
+        M910 475
+        L890 535
+        H930
+        "
+        stroke="#895B42"
+        stroke-width="7"
+        stroke-linecap="round"
+    />
+
+    <!-- BROW -->
+
+    <path
+        d="M810 440C835 425 860 425 875 435"
+        stroke="#2A211D"
+        stroke-width="13"
+        stroke-linecap="round"
+    />
+
+    <path
+        d="M945 435C965 425 990 425 1010 440"
+        stroke="#2A211D"
+        stroke-width="13"
+        stroke-linecap="round"
+    />
+
+</g>
+
+<!-- BARBER ICON -->
+
+<g transform="translate(1230 590)">
+
+    <circle
+        cx="90"
+        cy="90"
+        r="88"
+        stroke="#A37A4D"
+        stroke-width="4"
+        opacity=".8"
+    />
+
+    <path
+        d="
+        M50 60
+        L130 140
+        "
+        stroke="#171513"
+        stroke-width="9"
+        stroke-linecap="round"
+    />
+
+    <path
+        d="
+        M130 60
+        L50 140
+        "
+        stroke="#171513"
+        stroke-width="9"
+        stroke-linecap="round"
+    />
+
+    <circle
+        cx="90"
+        cy="100"
+        r="14"
+        fill="#A37A4D"
+    />
+
+</g>
+
+<!-- BOTTOM INFO -->
+
+<rect
+    x="100"
+    y="850"
+    width="300"
+    height="2"
+    fill="#A37A4D"
+/>
+
+<text
+    x="100"
+    y="895"
+    fill="#171513"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="24"
+    font-weight="700"
+>
+    TURNOS ONLINE
+</text>
+
+<text
+    x="100"
+    y="930"
+    fill="#74685C"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="17"
+>
+    Cortes · Barba · Fade · Servicio Premium
+</text>
+
+</svg>
