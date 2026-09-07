@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pol&iacute;tica de Privacidad &mdash; STUBER.WEB</title>
+
+  <meta
+    name="description"
+    content="Pol&iacute;tica de Privacidad de STUBER.WEB. Informaci&oacute;n sobre el tratamiento y protecci&oacute;n de datos personales."
+  >
+
+  <meta name="theme-color" content="#00a8ff">
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../favicon.svg">
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #111111;
+      --surface-2: #171717;
+      --text: #f5f5f5;
+      --muted: #a1a1a1;
+      --line: #292929;
+
+      /* ACENTO STUBER.WEB */
+      --accent: #00a8ff;
+
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      line-height: 1.7;
+      font-size: 16px;
+
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(calc(100% - 48px), var(--max));
+      margin: 0 auto;
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    header {
+      border-bottom: 1px solid var(--line);
+
+      position: sticky;
+      top: 0;
+      z-index: 50;
+
+      background: rgba(10, 10, 10, 0.92);
+
+      backdrop-filter: blur(18px);
+    }
+
+    .header-inner {
+      min-height: 76px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 9px;
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--accent);
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+      padding: 110px 0 90px;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+
+      font-size: 12px;
+      font-weight: 800;
+
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      max-width: 900px;
+
+      font-size: clamp(48px, 8vw, 96px);
+
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+
+      font-weight: 800;
+
+      margin-bottom: 30px;
+    }
+
+    .hero p {
+      max-width: 720px;
+
+      color: var(--muted);
+
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .updated {
+      margin-top: 28px;
+
+      color: #777;
+
+      font-size: 13px;
+    }
+
+
+    /* =====================================================
+       CONTENT
+    ===================================================== */
+
+    .content {
+      display: grid;
+
+      grid-template-columns: 250px minmax(0, 1fr);
+
+      gap: 90px;
+
+      padding: 90px 0 120px;
+    }
+
+    .toc {
+      position: sticky;
+      top: 110px;
+
+      align-self: start;
+    }
+
+    .toc-title {
+      color: #777;
+
+      font-size: 11px;
+      font-weight: 800;
+
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+
+      margin-bottom: 18px;
+    }
+
+    .toc nav {
+      display: flex;
+      flex-direction: column;
+
+      border-left: 1px solid var(--line);
+    }
+
+    .toc a {
+      padding: 7px 0 7px 18px;
+
+      color: #888;
+
+      font-size: 13px;
+
+      transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .toc a:hover {
+      color: var(--accent);
+    }
+
+    .legal-content {
+      min-width: 0;
+    }
+
+    .legal-section {
+      padding-bottom: 62px;
+      margin-bottom: 62px;
+
+      border-bottom: 1px solid var(--line);
+
+      scroll-margin-top: 110px;
+    }
+
+    .legal-section:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .section-number {
+      color: var(--accent);
+
+      font-size: 12px;
+      font-weight: 800;
+
+      letter-spacing: 0.12em;
+
+      margin-bottom: 12px;
+    }
+
+    .legal-section h2 {
+      font-size: clamp(26px, 3vw, 38px);
+
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+
+      margin-bottom: 24px;
+    }
+
+    .legal-section p {
+      color: #c4c4c4;
+
+      font-size: 16px;
+      line-height: 1.85;
+
+      margin-bottom: 18px;
+    }
+
+    .legal-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .legal-section strong {
+      color: var(--text);
+
+      font-weight: 650;
+    }
+
+    .legal-section ul {
+      margin: 20px 0 22px 22px;
+
+      color: #c4c4c4;
+    }
+
+    .legal-section li {
+      padding-left: 8px;
+
+      margin-bottom: 10px;
+
+      line-height: 1.75;
+    }
+
+    .legal-section li::marker {
+      color: var(--accent);
+    }
+
+
+    /* =====================================================
+       HIGHLIGHT
+    ===================================================== */
+
+    .highlight {
+      background: var(--surface);
+
+      border: 1px solid var(--line);
+
+      border-left: 3px solid var(--accent);
+
+      padding: 22px 24px;
+
+      margin: 26px 0;
+    }
+
+    .highlight p {
+      margin: 0;
+
+      font-size: 15px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+      border-top: 1px solid var(--line);
+
+      padding: 50px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: flex-start;
+
+      gap: 40px;
+    }
+
+    .footer-brand {
+      font-size: 14px;
+      font-weight: 800;
+
+      letter-spacing: 0.12em;
+
+      margin-bottom: 8px;
+    }
+
+    .footer-description {
+      color: #777;
+
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: flex-end;
+
+      gap: 10px 24px;
+    }
+
+    .footer-links a {
+      color: #888;
+
+      font-size: 13px;
+
+      transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .copyright {
+      margin-top: 40px;
+
+      padding-top: 24px;
+
+      border-top: 1px solid var(--line);
+
+      color: #555;
+
+      font-size: 12px;
+    }
+
+
+    /* =====================================================
+       RESPONSIVE — 850px
+    ===================================================== */
+
+    @media (max-width: 850px) {
+
+      .content {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding-top: 65px;
+      }
+
+      .toc {
+        position: static;
+      }
+
+      .toc nav {
+        display: grid;
+
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+      .toc a {
+        border-left: 0;
+
+        padding: 8px 12px 8px 0;
+      }
+
+      .hero {
+        padding: 80px 0 65px;
+      }
+    }
+
+
+    /* =====================================================
+       RESPONSIVE — 600px
+    ===================================================== */
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: min(calc(100% - 32px), var(--max));
+      }
+
+      .header-inner {
+        min-height: 68px;
+      }
+
+      .brand {
+        font-size: 13px;
+      }
+
+      .back-link {
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 65px 0 55px;
+      }
+
+      .hero h1 {
+        font-size: clamp(46px, 15vw, 72px);
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .content {
+        padding: 55px 0 80px;
+      }
+
+      .toc nav {
+        grid-template-columns: 1fr;
+      }
+
+      .legal-section {
+        padding-bottom: 45px;
+
+        margin-bottom: 45px;
+      }
+
+      .legal-section p,
+      .legal-section li {
+        font-size: 15px;
+      }
+
+      .highlight {
+        padding: 18px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
+
+        flex-direction: column;
+
+        gap: 12px;
+      }
+    }
+
+
+    /* =====================================================
+       ACCESSIBILITY
+    ===================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        transition: none !important;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       HEADER
+  ===================================================== -->
+
+  <header>
+
+    <div class="container header-inner">
+
+      <a href="../index.html" class="brand">
+        STUBER.WEB
+      </a>
+
+      <a href="../index.html" class="back-link">
+        &larr; Volver al sitio
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN
+  ===================================================== -->
+
+  <main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="container">
+
+        <div class="eyebrow">
+          Legal / Privacidad
+        </div>
+
+        <h1>
+          Pol&iacute;tica de<br>Privacidad
+        </h1>
+
+        <p>
+          En STUBER.WEB respetamos la privacidad de las personas que
+          visitan nuestro sitio y procuramos tratar los datos personales
+          de manera responsable, transparente y segura.
+        </p>
+
+        <div class="updated">
+          &Uacute;ltima actualizaci&oacute;n: septiembre de 2026
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTENT -->
+
+    <section class="container content">
+
+
+      <!-- TABLE OF CONTENTS -->
+
+      <aside class="toc">
+
+        <div class="toc-title">
+          Contenido
+        </div>
+
+        <nav>
+
+          <a href="#responsable">
+            01 &mdash; Responsable
+          </a>
+
+          <a href="#datos">
+            02 &mdash; Datos
+          </a>
+
+          <a href="#finalidad">
+            03 &mdash; Finalidad
+          </a>
+
+          <a href="#tratamiento">
+            04 &mdash; Tratamiento
+          </a>
+
+          <a href="#conservacion">
+            05 &mdash; Conservaci&oacute;n
+          </a>
+
+          <a href="#terceros">
+            06 &mdash; Terceros
+          </a>
+
+          <a href="#seguridad">
+            07 &mdash; Seguridad
+          </a>
+
+          <a href="#derechos">
+            08 &mdash; Derechos
+          </a>
+
+          <a href="#cookies">
+            09 &mdash; Cookies
+          </a>
+
+          <a href="#externos">
+            10 &mdash; Enlaces externos
+          </a>
+
+          <a href="#cambios">
+            11 &mdash; Cambios
+          </a>
+
+          <a href="#contacto">
+            12 &mdash; Contacto
+          </a>
+
+        </nav>
+
+      </aside>
+
+
+      <!-- LEGAL CONTENT -->
+
+      <div class="legal-content">
+
+
+        <!-- 01 -->
+
+        <section
+          class="legal-section"
+          id="responsable"
+        >
+
+          <div class="section-number">
+            01
+          </div>
+
+          <h2>
+            Responsable y alcance
+          </h2>
+
+          <p>
+            Esta Pol&iacute;tica de Privacidad describe los criterios generales
+            aplicables al tratamiento de datos personales que puedan ser
+            recibidos a trav&eacute;s del sitio web de
+            <strong>STUBER.WEB</strong>
+            y de sus canales de contacto.
+          </p>
+
+          <p>
+            El sitio tiene como finalidad principal presentar proyectos,
+            servicios y trabajos relacionados con dise&ntilde;o y desarrollo web.
+          </p>
+
+          <div class="highlight">
+
+            <p>
+              La informaci&oacute;n personal ser&aacute; tratada de acuerdo con la
+              normativa argentina aplicable en materia de protecci&oacute;n de
+              datos personales.
+            </p>
+
+          </div>
+
+        </section>
+
+
+        <!-- 02 -->
+
+        <section
+          class="legal-section"
+          id="datos"
+        >
+
+          <div class="section-number">
+            02
+          </div>
+
+          <h2>
+            Datos que podemos recibir
+          </h2>
+
+          <p>
+            Dependiendo de la forma en que una persona se comunique con
+            STUBER.WEB, podr&aacute;n recibirse determinados datos necesarios
+            para responder una consulta o gestionar una solicitud.
+          </p>
+
+          <p>
+            Estos datos pueden incluir, cuando corresponda:
+          </p>
+
+          <ul>
+
+            <li>
+              Nombre o identificaci&oacute;n proporcionada voluntariamente.
+            </li>
+
+            <li>
+              Direcci&oacute;n de correo electr&oacute;nico.
+            </li>
+
+            <li>
+              N&uacute;mero de tel&eacute;fono o medio de contacto.
+            </li>
+
+            <li>
+              Informaci&oacute;n incluida voluntariamente en una consulta.
+            </li>
+
+            <li>
+              Informaci&oacute;n relacionada con el proyecto solicitado.
+            </li>
+
+          </ul>
+
+          <p>
+            STUBER.WEB procura limitar la recopilaci&oacute;n de informaci&oacute;n
+            a aquella que resulte razonablemente necesaria para la finalidad
+            correspondiente.
+          </p>
+
+        </section>
+
+
+        <!-- 03 -->
+
+        <section
+          class="legal-section"
+          id="finalidad"
+        >
+
+          <div class="section-number">
+            03
+          </div>
+
+          <h2>
+            Finalidad del tratamiento
+          </h2>
+
+          <p>
+            Los datos recibidos podr&aacute;n utilizarse para atender consultas,
+            responder solicitudes, brindar informaci&oacute;n sobre servicios,
+            preparar propuestas y mantener comunicaciones relacionadas con
+            proyectos.
+          </p>
+
+          <p>
+            Cuando una persona solicite informaci&oacute;n sobre un servicio,
+            los datos proporcionados podr&aacute;n ser utilizados exclusivamente
+            en la medida necesaria para gestionar dicha solicitud.
+          </p>
+
+          <p>
+            Los datos no deber&iacute;an utilizarse para finalidades incompatibles
+            con aquellas para las cuales fueron proporcionados.
+          </p>
+
+        </section>
+
+
+        <!-- 04 -->
+
+        <section
+          class="legal-section"
+          id="tratamiento"
+        >
+
+          <div class="section-number">
+            04
+          </div>
+
+          <h2>
+            Tratamiento de la informaci&oacute;n
+          </h2>
+
+          <p>
+            STUBER.WEB procurar&aacute; que los datos personales sean tratados
+            de manera adecuada, pertinente y razonable en relaci&oacute;n con
+            las finalidades informadas.
+          </p>
+
+          <p>
+            Cuando una persona se comunique voluntariamente con STUBER.WEB,
+            se entender&aacute; que proporciona los datos necesarios para poder
+            responder dicha comunicaci&oacute;n, sin perjuicio de los derechos
+            que correspondan conforme a la normativa vigente.
+          </p>
+
+          <p>
+            No se solicitar&aacute;n datos personales que no sean necesarios
+            para la finalidad correspondiente.
+          </p>
+
+        </section>
+
+
+        <!-- 05 -->
+
+        <section
+          class="legal-section"
+          id="conservacion"
+        >
+
+          <div class="section-number">
+            05
+          </div>
+
+          <h2>
+            Conservaci&oacute;n de los datos
+          </h2>
+
+          <p>
+            Los datos personales ser&aacute;n conservados durante el tiempo
+            razonablemente necesario para cumplir con la finalidad para la
+            cual fueron recibidos o mientras exista una relaci&oacute;n comercial
+            o profesional que justifique su conservaci&oacute;n.
+          </p>
+
+          <p>
+            Cuando la informaci&oacute;n deje de ser necesaria, se procurar&aacute;
+            eliminarla, anonimizarla o conservarla &uacute;nicamente cuando exista
+            una obligaci&oacute;n legal o una raz&oacute;n leg&iacute;tima que lo justifique.
+          </p>
+
+        </section>
+
+
+        <!-- 06 -->
+
+        <section
+          class="legal-section"
+          id="terceros"
+        >
+
+          <div class="section-number">
+            06
+          </div>
+
+          <h2>
+            Servicios de terceros
+          </h2>
+
+          <p>
+            Determinadas funcionalidades del sitio o de los canales de
+            comunicaci&oacute;n podr&iacute;an depender de servicios tecnol&oacute;gicos
+            proporcionados por terceros.
+          </p>
+
+          <p>
+            Cuando corresponda, dichos proveedores podr&aacute;n procesar
+            informaci&oacute;n t&eacute;cnica o datos necesarios para prestar el
+            servicio contratado, de acuerdo con sus propias condiciones
+            y pol&iacute;ticas de privacidad.
+          </p>
+
+          <p>
+            STUBER.WEB no comercializa datos personales como actividad propia.
+          </p>
+
+        </section>
+
+
+        <!-- 07 -->
+
+        <section
+          class="legal-section"
+          id="seguridad"
+        >
+
+          <div class="section-number">
+            07
+          </div>
+
+          <h2>
+            Seguridad
+          </h2>
+
+          <p>
+            STUBER.WEB procura aplicar medidas razonables de seguridad
+            destinadas a evitar el acceso no autorizado, alteraci&oacute;n,
+            divulgaci&oacute;n o destrucci&oacute;n indebida de los datos personales
+            bajo su control.
+          </p>
+
+          <p>
+            Sin embargo, ning&uacute;n sistema de almacenamiento o transmisi&oacute;n
+            de informaci&oacute;n a trav&eacute;s de Internet puede garantizar una
+            seguridad absoluta.
+          </p>
+
+        </section>
+
+
+        <!-- 08 -->
+
+        <section
+          class="legal-section"
+          id="derechos"
+        >
+
+          <div class="section-number">
+            08
+          </div>
+
+          <h2>
+            Derechos de las personas
+          </h2>
+
+          <p>
+            Las personas titulares de datos personales pueden ejercer los
+            derechos reconocidos por la normativa argentina aplicable,
+            incluyendo aquellos relacionados con el acceso, rectificaci&oacute;n,
+            actualizaci&oacute;n y, cuando corresponda, supresi&oacute;n de sus datos.
+          </p>
+
+          <p>
+            Las solicitudes deber&aacute;n realizarse utilizando los canales de
+            contacto disponibles en el sitio y proporcionando informaci&oacute;n
+            suficiente para poder identificar la solicitud.
+          </p>
+
+          <div class="highlight">
+
+            <p>
+              Las solicitudes ser&aacute;n evaluadas y atendidas de acuerdo con
+              los requisitos, plazos y condiciones establecidos por la
+              normativa aplicable.
+            </p>
+
+          </div>
+
+        </section>
+
+
+        <!-- 09 -->
+
+        <section
+          class="legal-section"
+          id="cookies"
+        >
+
+          <div class="section-number">
+            09
+          </div>
+
+          <h2>
+            Cookies y tecnolog&iacute;as similares
+          </h2>
+
+          <p>
+            El sitio puede utilizar cookies u otras tecnolog&iacute;as similares
+            cuando resulten necesarias para determinadas funciones t&eacute;cnicas,
+            preferencias o funcionalidades del sitio.
+          </p>
+
+          <p>
+            Si en el futuro se incorporan herramientas de anal&iacute;tica,
+            publicidad, seguimiento u otras tecnolog&iacute;as que impliquen
+            tratamiento adicional de informaci&oacute;n, esta pol&iacute;tica podr&aacute;
+            actualizarse para informar adecuadamente sobre su utilizaci&oacute;n.
+          </p>
+
+          <p>
+            El comportamiento de las cookies tambi&eacute;n puede depender de la
+            configuraci&oacute;n del navegador utilizado por cada visitante.
+          </p>
+
+        </section>
+
+
+        <!-- 10 -->
+
+        <section
+          class="legal-section"
+          id="externos"
+        >
+
+          <div class="section-number">
+            10
+          </div>
+
+          <h2>
+            Enlaces externos
+          </h2>
+
+          <p>
+            El sitio puede contener enlaces hacia sitios web, plataformas
+            o servicios de terceros.
+          </p>
+
+          <p>
+            STUBER.WEB no controla las pol&iacute;ticas de privacidad ni las
+            pr&aacute;cticas de tratamiento de datos de dichos terceros.
+            Se recomienda consultar sus respectivas pol&iacute;ticas antes de
+            proporcionar informaci&oacute;n personal.
+          </p>
+
+        </section>
+
+
+        <!-- 11 -->
+
+        <section
+          class="legal-section"
+          id="cambios"
+        >
+
+          <div class="section-number">
+            11
+          </div>
+
+          <h2>
+            Cambios en esta pol&iacute;tica
+          </h2>
+
+          <p>
+            Esta Pol&iacute;tica de Privacidad puede actualizarse cuando sea
+            necesario para reflejar cambios en el sitio, en los servicios
+            ofrecidos, en las tecnolog&iacute;as utilizadas o en la normativa
+            aplicable.
+          </p>
+
+          <p>
+            La versi&oacute;n publicada en esta p&aacute;gina ser&aacute; considerada la
+            versi&oacute;n vigente.
+          </p>
+
+        </section>
+
+
+        <!-- 12 -->
+
+        <section
+          class="legal-section"
+          id="contacto"
+        >
+
+          <div class="section-number">
+            12
+          </div>
+
+          <h2>
+            Contacto
+          </h2>
+
+          <p>
+            Si ten&eacute;s preguntas sobre esta Pol&iacute;tica de Privacidad o
+            quer&eacute;s ejercer alguno de los derechos relacionados con tus
+            datos personales, pod&eacute;s comunicarte con STUBER.WEB a trav&eacute;s
+            de los canales de contacto disponibles en el sitio.
+          </p>
+
+          <p>
+            Para facilitar la gesti&oacute;n de una solicitud, se recomienda
+            indicar claramente el motivo de la consulta y los datos necesarios
+            para poder responderla.
+          </p>
+
+        </section>
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-inner">
+
+
+        <div>
+
+          <div class="footer-brand">
+            STUBER.WEB
+          </div>
+
+          <div class="footer-description">
+            Dise&ntilde;o &amp; Desarrollo Web
+          </div>
+
+        </div>
+
+
+        <nav class="footer-links">
+
+          <a href="../index.html">
+            Inicio
+          </a>
+
+          <a href="terminos-y-condiciones.html">
+            T&eacute;rminos y Condiciones
+          </a>
+
+          <a href="politica-de-privacidad.html">
+            Pol&iacute;tica de Privacidad
+          </a>
+
+          <a href="aviso-legal.html">
+            Aviso Legal
+          </a>
+
+        </nav>
+
+
+      </div>
+
+
+      <div class="copyright">
+        &copy; 2026 STUBER.WEB &mdash; Todos los derechos reservados.
+      </div>
+
+
+    </div>
+
+  </footer>
+
+
+</body>
+</html>

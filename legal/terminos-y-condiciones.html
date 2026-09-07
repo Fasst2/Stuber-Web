@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Términos y Condiciones — STUBER.WEB</title>
+
+    <meta
+        name="description"
+        content="Términos y condiciones de uso de STUBER.WEB."
+    >
+
+    <meta name="theme-color" content="#0a0a0a">
+
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../favicon.svg">
+
+    <style>
+
+        :root {
+            --bg: #0a0a0a;
+            --surface: #111111;
+            --surface-2: #171717;
+            --text: #f5f5f0;
+            --muted: #a3a3a0;
+            --line: #292929;
+
+            /* AZUL PRINCIPAL STUBER.WEB */
+            --accent: #00a8ff;
+
+            --max-width: 1120px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            background: var(--bg);
+            color: var(--text);
+
+            font-family:
+                Inter,
+                ui-sans-serif,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            line-height: 1.7;
+
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        ::selection {
+            background: var(--accent);
+            color: #ffffff;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .site-header {
+            width: 100%;
+
+            border-bottom: 1px solid var(--line);
+
+            position: sticky;
+            top: 0;
+            z-index: 50;
+
+            background: rgba(10, 10, 10, 0.92);
+
+            backdrop-filter: blur(18px);
+        }
+
+        .nav {
+            width: min(var(--max-width), calc(100% - 48px));
+
+            min-height: 82px;
+
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 32px;
+        }
+
+        .brand {
+            text-decoration: none;
+
+            font-size: 15px;
+            font-weight: 800;
+
+            letter-spacing: .14em;
+        }
+
+        .brand span {
+            color: var(--accent);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+
+            gap: 10px;
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+            text-decoration: none;
+
+            transition:
+                color .2s ease,
+                transform .2s ease;
+        }
+
+        .back-link:hover {
+            color: var(--text);
+
+            transform: translateX(-3px);
+        }
+
+
+        /* =====================================================
+           PAGE
+        ===================================================== */
+
+        .page {
+            width: min(var(--max-width), calc(100% - 48px));
+
+            margin: 0 auto;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            padding: 120px 0 90px;
+
+            border-bottom: 1px solid var(--line);
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 28px;
+
+            color: var(--accent);
+
+            font-size: 12px;
+            font-weight: 800;
+
+            letter-spacing: .16em;
+
+            text-transform: uppercase;
+        }
+
+        .eyebrow::before {
+            content: "";
+
+            width: 28px;
+            height: 1px;
+
+            background: var(--accent);
+        }
+
+        h1 {
+            max-width: 900px;
+
+            font-size: clamp(48px, 8vw, 104px);
+
+            line-height: .94;
+
+            letter-spacing: -.055em;
+
+            font-weight: 800;
+        }
+
+        .hero-description {
+            max-width: 680px;
+
+            margin-top: 34px;
+
+            color: var(--muted);
+
+            font-size: clamp(17px, 2vw, 21px);
+
+            line-height: 1.65;
+        }
+
+        .updated {
+            margin-top: 38px;
+
+            color: #777773;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           CONTENT
+        ===================================================== */
+
+        .content-layout {
+            display: grid;
+
+            grid-template-columns:
+                240px minmax(0, 1fr);
+
+            gap: 90px;
+
+            padding: 90px 0 120px;
+        }
+
+
+        /* =====================================================
+           TABLE OF CONTENTS
+        ===================================================== */
+
+        .toc {
+            position: sticky;
+
+            top: 110px;
+
+            align-self: start;
+        }
+
+        .toc-title {
+            margin-bottom: 18px;
+
+            color: #777773;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: .15em;
+
+            text-transform: uppercase;
+        }
+
+        .toc a {
+            display: block;
+
+            padding: 7px 0;
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+            text-decoration: none;
+
+            transition:
+                color .2s ease;
+        }
+
+        .toc a:hover {
+            color: var(--accent);
+        }
+
+
+        /* =====================================================
+           LEGAL CONTENT
+        ===================================================== */
+
+        .legal-content {
+            max-width: 760px;
+        }
+
+        .legal-section {
+            padding: 0 0 62px;
+
+            margin-bottom: 62px;
+
+            border-bottom: 1px solid var(--line);
+
+            scroll-margin-top: 110px;
+        }
+
+        .legal-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-number {
+            display: block;
+
+            margin-bottom: 16px;
+
+            color: var(--accent);
+
+            font-size: 12px;
+            font-weight: 800;
+
+            letter-spacing: .12em;
+        }
+
+        h2 {
+            margin-bottom: 22px;
+
+            font-size: clamp(28px, 4vw, 42px);
+
+            line-height: 1.05;
+
+            letter-spacing: -.035em;
+        }
+
+        h3 {
+            margin: 30px 0 10px;
+
+            font-size: 19px;
+
+            line-height: 1.3;
+        }
+
+        p {
+            margin-bottom: 18px;
+
+            color: #c2c2bd;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            margin: 20px 0 22px 22px;
+
+            color: #c2c2bd;
+        }
+
+        li {
+            margin-bottom: 10px;
+
+            padding-left: 6px;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+        }
+
+        li::marker {
+            color: var(--accent);
+        }
+
+        strong {
+            color: var(--text);
+        }
+
+
+        /* =====================================================
+           HIGHLIGHT
+        ===================================================== */
+
+        .highlight {
+            padding: 24px 26px;
+
+            margin: 26px 0;
+
+            border: 1px solid var(--line);
+
+            border-left: 3px solid var(--accent);
+
+            background: var(--surface);
+        }
+
+        .highlight p {
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           CONTACT BOX
+        ===================================================== */
+
+        .contact-box {
+            padding: 30px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--line);
+        }
+
+        .contact-box p {
+            margin-bottom: 8px;
+        }
+
+        .contact-box a {
+            color: var(--accent);
+
+            text-decoration: none;
+
+            transition:
+                color .2s ease;
+        }
+
+        .contact-box a:hover {
+            color: #ffffff;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .site-footer {
+            border-top: 1px solid var(--line);
+
+            background: var(--bg);
+        }
+
+        .footer-inner {
+            width: min(
+                var(--max-width),
+                calc(100% - 48px)
+            );
+
+            min-height: 100px;
+
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 24px;
+
+            color: #777773;
+
+            font-size: 13px;
+        }
+
+        .footer-links {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+        }
+
+        .footer-links a {
+            display: inline-flex;
+            align-items: center;
+
+            min-height: 34px;
+
+            padding: 7px 12px;
+
+            border: 1px solid transparent;
+
+            border-radius: 999px;
+
+            color: #888;
+
+            font-size: 13px;
+
+            text-decoration: none;
+
+            transition:
+                color .2s ease,
+                background-color .2s ease,
+                border-color .2s ease,
+                transform .2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+
+            background: rgba(0, 168, 255, 0.07);
+
+            border-color: rgba(0, 168, 255, 0.35);
+
+            transform: translateY(-1px);
+        }
+
+        .footer-links a:focus-visible {
+            outline: 2px solid var(--accent);
+
+            outline-offset: 3px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE — 800px
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .nav,
+            .page,
+            .footer-inner {
+                width: min(
+                    100% - 32px,
+                    var(--max-width)
+                );
+            }
+
+            .nav {
+                min-height: 70px;
+            }
+
+            .hero {
+                padding: 80px 0 65px;
+            }
+
+            .content-layout {
+                grid-template-columns: 1fr;
+
+                gap: 50px;
+
+                padding: 65px 0 80px;
+            }
+
+            .toc {
+                position: static;
+
+                padding-bottom: 24px;
+
+                border-bottom: 1px solid var(--line);
+            }
+
+            .toc a {
+                display: inline-block;
+
+                margin-right: 18px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .footer-inner {
+                padding: 28px 0;
+
+                align-items: flex-start;
+
+                flex-direction: column;
+
+                gap: 20px;
+            }
+
+            .footer-links {
+                justify-content: flex-start;
+
+                width: 100%;
+            }
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE — 520px
+        ===================================================== */
+
+        @media (max-width: 520px) {
+
+            .hero {
+                padding: 65px 0 55px;
+            }
+
+            h1 {
+                font-size: clamp(
+                    46px,
+                    15vw,
+                    72px
+                );
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .content-layout {
+                padding-top: 55px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 15px;
+
+                line-height: 1.75;
+            }
+
+            li {
+                font-size: 15px;
+            }
+
+            .highlight {
+                padding: 20px;
+            }
+
+            .contact-box {
+                padding: 22px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                width: 100%;
+            }
+
+            .footer-links a {
+                width: fit-content;
+            }
+
+        }
+
+
+        /* =====================================================
+           ACCESSIBILITY
+        ===================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+    <div class="nav">
+
+        <a
+            href="../index.html"
+            class="brand"
+            aria-label="STUBER.WEB — página principal"
+        >
+            STUBER<span>.</span>WEB
+        </a>
+
+        <a
+            href="../index.html"
+            class="back-link"
+        >
+            &larr; Volver al sitio
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="page">
+
+            <div class="eyebrow">
+                Información legal
+            </div>
+
+            <h1>
+                Términos y<br>
+                condiciones.
+            </h1>
+
+            <p class="hero-description">
+                Estas condiciones establecen las reglas de uso del sitio
+                STUBER.WEB y describen los principales aspectos relacionados
+                con nuestros servicios digitales.
+            </p>
+
+            <p class="updated">
+                Última actualización: septiembre de 2026
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTENT -->
+
+    <div class="page">
+
+        <div class="content-layout">
+
+
+            <!-- TABLE OF CONTENTS -->
+
+            <aside class="toc">
+
+                <div class="toc-title">
+                    En esta página
+                </div>
+
+                <a href="#objeto">
+                    01 · Objeto
+                </a>
+
+                <a href="#sitio">
+                    02 · Uso del sitio
+                </a>
+
+                <a href="#servicios">
+                    03 · Servicios
+                </a>
+
+                <a href="#propiedad">
+                    04 · Propiedad intelectual
+                </a>
+
+                <a href="#terceros">
+                    05 · Enlaces externos
+                </a>
+
+                <a href="#responsabilidad">
+                    06 · Responsabilidad
+                </a>
+
+                <a href="#modificaciones">
+                    07 · Modificaciones
+                </a>
+
+                <a href="#contacto">
+                    08 · Contacto
+                </a>
+
+            </aside>
+
+
+            <!-- LEGAL CONTENT -->
+
+            <article class="legal-content">
+
+
+                <!-- 01 — OBJETO -->
+
+                <section
+                    class="legal-section"
+                    id="objeto"
+                >
+
+                    <span class="section-number">
+                        01
+                    </span>
+
+                    <h2>
+                        Objeto
+                    </h2>
+
+                    <p>
+                        STUBER.WEB es un sitio web destinado a presentar
+                        servicios de diseño, desarrollo y creación de
+                        experiencias digitales, así como proyectos,
+                        demostraciones y trabajos realizados.
+                    </p>
+
+                    <p>
+                        El acceso y utilización del sitio implica la
+                        aceptación de estos términos en la medida en que
+                        resulten aplicables.
+                    </p>
+
+                </section>
+
+
+                <!-- 02 — USO DEL SITIO -->
+
+                <section
+                    class="legal-section"
+                    id="sitio"
+                >
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <h2>
+                        Uso del sitio
+                    </h2>
+
+                    <p>
+                        El usuario se compromete a utilizar STUBER.WEB
+                        de forma lícita, responsable y respetuosa con
+                        la legislación aplicable.
+                    </p>
+
+                    <p>
+                        No está permitido utilizar el sitio para realizar
+                        actividades que puedan afectar su funcionamiento,
+                        seguridad, disponibilidad o integridad.
+                    </p>
+
+                    <div class="highlight">
+
+                        <p>
+
+                            <strong>
+                                Importante:
+                            </strong>
+
+                            los contenidos publicados en el sitio tienen
+                            finalidad informativa y comercial. La
+                            presentación de un proyecto no constituye por
+                            sí misma una oferta contractual vinculante.
+
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- 03 — SERVICIOS -->
+
+                <section
+                    class="legal-section"
+                    id="servicios"
+                >
+
+                    <span class="section-number">
+                        03
+                    </span>
+
+                    <h2>
+                        Servicios
+                    </h2>
+
+                    <p>
+                        STUBER.WEB puede ofrecer servicios relacionados
+                        con diseño web, desarrollo frontend, desarrollo
+                        full-stack, optimización, mantenimiento,
+                        implementación y otras soluciones digitales.
+                    </p>
+
+                    <p>
+                        Las características, alcance, plazos, precios,
+                        condiciones de entrega y demás aspectos de cada
+                        proyecto serán acordados individualmente con
+                        cada cliente.
+                    </p>
+
+                    <p>
+                        La información publicada en el sitio puede ser
+                        modificada o actualizada sin necesidad de aviso
+                        previo.
+                    </p>
+
+                </section>
+
+
+                <!-- 04 — PROPIEDAD INTELECTUAL -->
+
+                <section
+                    class="legal-section"
+                    id="propiedad"
+                >
+
+                    <span class="section-number">
+                        04
+                    </span>
+
+                    <h2>
+                        Propiedad intelectual
+                    </h2>
+
+                    <p>
+                        Los elementos que forman parte de STUBER.WEB,
+                        incluyendo código, diseño visual, estructura,
+                        textos, logotipos, gráficos, animaciones y
+                        elementos audiovisuales, pueden encontrarse
+                        protegidos por derechos de propiedad intelectual.
+                    </p>
+
+                    <p>
+                        Salvo autorización expresa, no está permitido
+                        copiar, reproducir, modificar, distribuir,
+                        publicar o utilizar comercialmente los contenidos
+                        del sitio.
+                    </p>
+
+                    <p>
+                        Cuando se muestran trabajos de terceros,
+                        determinadas marcas, imágenes, nombres comerciales
+                        o recursos pueden pertenecer a sus respectivos
+                        titulares.
+                    </p>
+
+                </section>
+
+
+                <!-- 05 — TERCEROS -->
+
+                <section
+                    class="legal-section"
+                    id="terceros"
+                >
+
+                    <span class="section-number">
+                        05
+                    </span>
+
+                    <h2>
+                        Enlaces y servicios de terceros
+                    </h2>
+
+                    <p>
+                        STUBER.WEB puede incluir enlaces hacia sitios,
+                        servicios, plataformas o recursos externos.
+                    </p>
+
+                    <p>
+                        Dichos servicios poseen sus propias condiciones
+                        de uso y políticas de privacidad. STUBER.WEB no
+                        controla necesariamente el contenido, disponibilidad
+                        o funcionamiento de sitios externos.
+                    </p>
+
+                </section>
+
+
+                <!-- 06 — RESPONSABILIDAD -->
+
+                <section
+                    class="legal-section"
+                    id="responsabilidad"
+                >
+
+                    <span class="section-number">
+                        06
+                    </span>
+
+                    <h2>
+                        Responsabilidad
+                    </h2>
+
+                    <p>
+                        Se procura mantener la información del sitio
+                        actualizada y disponible, pero no se garantiza
+                        que el contenido esté permanentemente libre de
+                        errores, interrupciones u omisiones.
+                    </p>
+
+                    <p>
+                        STUBER.WEB no será responsable por daños derivados
+                        exclusivamente de interrupciones, fallos técnicos,
+                        servicios de terceros o circunstancias que se
+                        encuentren fuera de su control razonable.
+                    </p>
+
+                </section>
+
+
+                <!-- 07 — MODIFICACIONES -->
+
+                <section
+                    class="legal-section"
+                    id="modificaciones"
+                >
+
+                    <span class="section-number">
+                        07
+                    </span>
+
+                    <h2>
+                        Modificaciones
+                    </h2>
+
+                    <p>
+                        STUBER.WEB podrá modificar, actualizar o retirar
+                        contenidos, funcionalidades y estas condiciones
+                        cuando resulte necesario para mantener o mejorar
+                        el funcionamiento del sitio.
+                    </p>
+
+                    <p>
+                        La versión publicada en esta página será la
+                        considerada vigente desde su fecha de actualización.
+                    </p>
+
+                </section>
+
+
+                <!-- 08 — CONTACTO -->
+
+                <section
+                    class="legal-section"
+                    id="contacto"
+                >
+
+                    <span class="section-number">
+                        08
+                    </span>
+
+                    <h2>
+                        Contacto
+                    </h2>
+
+                    <p>
+                        Si tenés consultas relacionadas con estos términos
+                        o con el funcionamiento de STUBER.WEB, podés
+                        comunicarte mediante los canales publicados en
+                        nuestro sitio.
+                    </p>
+
+                    <div class="contact-box">
+
+                        <p>
+                            <strong>
+                                STUBER.WEB
+                            </strong>
+                        </p>
+
+                        <p>
+                            Diseño &amp; Desarrollo Web
+                        </p>
+
+                        <p>
+                            <a href="../index.html#contacto">
+                                Ir a contacto &rarr;
+                            </a>
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+            </article>
+
+        </div>
+
+    </div>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <span>
+            STUBER.WEB &copy; 2026
+        </span>
+
+        <nav class="footer-links">
+
+            <a href="terminos-y-condiciones.html">
+                Términos y Condiciones
+            </a>
+
+            <a href="politica-de-privacidad.html">
+                Política de Privacidad
+            </a>
+
+            <a href="aviso-legal.html">
+                Aviso Legal
+            </a>
+
+        </nav>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
