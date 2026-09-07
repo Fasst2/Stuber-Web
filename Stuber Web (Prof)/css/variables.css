@@ -1,0 +1,208 @@
+/* =========================================================
+   STUBER.WEB — DESIGN TOKENS
+   css/variables.css
+========================================================= */
+
+:root {
+
+    /* =====================================================
+       COLORS
+    ====================================================== */
+
+    --color-bg: #080c11;
+    --color-bg-secondary: #0e141c;
+    --color-bg-tertiary: #111720;
+
+    --color-surface: rgba(255, 255, 255, 0.035);
+    --color-surface-hover: rgba(255, 255, 255, 0.06);
+
+    --color-white: #ffffff;
+    --color-text: #d7dde5;
+    --color-text-secondary: #a4adb9;
+    --color-muted: #7d8794;
+
+    --color-accent: #00a8ff;
+    --color-accent-light: #35b9ff;
+    --color-accent-dark: #008bd3;
+
+    --color-border: rgba(255, 255, 255, 0.08);
+    --color-border-light: rgba(255, 255, 255, 0.12);
+
+    --color-success: #38d996;
+
+
+    /* =====================================================
+       GRADIENTS
+    ====================================================== */
+
+    --gradient-accent:
+        linear-gradient(
+            135deg,
+            #00a8ff 0%,
+            #0077ff 100%
+        );
+
+    --gradient-glow:
+        radial-gradient(
+            circle,
+            rgba(0, 168, 255, 0.18) 0%,
+            rgba(0, 168, 255, 0) 70%
+        );
+
+    --gradient-dark:
+        linear-gradient(
+            180deg,
+            var(--color-bg) 0%,
+            var(--color-bg-secondary) 100%
+        );
+
+
+    /* =====================================================
+       TYPOGRAPHY
+    ====================================================== */
+
+    --font-display:
+        "Space Grotesk",
+        sans-serif;
+
+    --font-body:
+        "Inter",
+        sans-serif;
+
+
+    /* Display sizes */
+
+    --text-hero:
+        clamp(4rem, 9vw, 9rem);
+
+    --text-display:
+        clamp(3rem, 6vw, 6rem);
+
+    --text-heading:
+        clamp(2.2rem, 4vw, 4.5rem);
+
+    --text-subheading:
+        clamp(1.5rem, 2.5vw, 2.5rem);
+
+
+    /* Body sizes */
+
+    --text-xl: 1.25rem;
+    --text-lg: 1.125rem;
+    --text-md: 1rem;
+    --text-sm: 0.875rem;
+    --text-xs: 0.75rem;
+
+
+    /* Line heights */
+
+    --leading-tight: 0.95;
+    --leading-snug: 1.15;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.75;
+
+
+    /* =====================================================
+       FONT WEIGHTS
+    ====================================================== */
+
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+
+    /* =====================================================
+       SPACING
+    ====================================================== */
+
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
+    --space-32: 8rem;
+    --space-40: 10rem;
+
+
+    /* =====================================================
+       LAYOUT
+    ====================================================== */
+
+    --container-width: 1400px;
+    --container-padding: clamp(1.25rem, 4vw, 4rem);
+
+    --section-padding:
+        clamp(6rem, 10vw, 10rem);
+
+
+    /* =====================================================
+       BORDERS / RADIUS
+    ====================================================== */
+
+    --radius-sm: 0.35rem;
+    --radius-md: 0.65rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-full: 999px;
+
+
+    /* =====================================================
+       SHADOWS
+    ====================================================== */
+
+    --shadow-sm:
+        0 4px 20px rgba(0, 0, 0, 0.15);
+
+    --shadow-md:
+        0 15px 50px rgba(0, 0, 0, 0.25);
+
+    --shadow-lg:
+        0 30px 100px rgba(0, 0, 0, 0.4);
+
+    --shadow-accent:
+        0 0 60px rgba(0, 168, 255, 0.12);
+
+
+    /* =====================================================
+       MOTION
+    ====================================================== */
+
+    --ease-default:
+        cubic-bezier(0.22, 1, 0.36, 1);
+
+    --ease-smooth:
+        cubic-bezier(0.16, 1, 0.3, 1);
+
+    --ease-in-out:
+        cubic-bezier(0.65, 0, 0.35, 1);
+
+    --transition-fast:
+        180ms var(--ease-default);
+
+    --transition-normal:
+        350ms var(--ease-default);
+
+    --transition-slow:
+        600ms var(--ease-smooth);
+
+
+    /* =====================================================
+       Z-INDEX SYSTEM
+    ====================================================== */
+
+    --z-base: 1;
+    --z-content: 10;
+    --z-header: 100;
+    --z-overlay: 500;
+    --z-cursor: 1000;
+    --z-preloader: 9999;
+
+}
