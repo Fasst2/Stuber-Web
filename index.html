@@ -1,0 +1,3045 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#080c11"
+    >
+
+    <meta
+        name="color-scheme"
+        content="dark"
+    >
+
+    <meta
+        name="author"
+        content="Federico Stuber"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    >
+
+    <title>STUBER.WEB — Desarrollo Web Freelance</title>
+
+    <meta
+        name="description"
+        content="STUBER.WEB — Desarrollo Web Freelance. Diseño y desarrollo de sitios web modernos, rápidos, responsive y personalizados."
+    >
+
+    <!-- OPEN GRAPH -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:locale"
+        content="es_AR"
+    >
+
+    <meta
+        property="og:site_name"
+        content="STUBER.WEB"
+    >
+
+    <meta
+        property="og:title"
+        content="STUBER.WEB — Desarrollo Web Freelance"
+    >
+
+    <meta
+        property="og:description"
+        content="Diseño y desarrollo de sitios web modernos, rápidos, responsive y personalizados."
+    >
+
+    <!-- TWITTER / X -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="STUBER.WEB — Desarrollo Web Freelance"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Diseño y desarrollo de sitios web modernos, rápidos, responsive y personalizados."
+    >
+
+    <!-- FAVICON -->
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="favicon.svg"
+    >
+
+    <link
+        rel="shortcut icon"
+        href="favicon.svg"
+        type="image/svg+xml"
+    >
+
+    <link
+        rel="manifest"
+        href="site.webmanifest"
+    >
+
+    <!-- FONTS -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- STYLES -->
+
+    <link
+        rel="stylesheet"
+        href="css/reset.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/sections.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/contact.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/responsive.css"
+    >
+
+</head>
+
+
+<body class="is-loading">
+
+
+    <!-- =====================================================
+         PRELOADER
+    ====================================================== -->
+
+    <div
+        class="preloader"
+        id="preloader"
+        aria-hidden="true"
+    >
+
+        <div class="preloader__content">
+
+            <span class="preloader__brand">
+                STUBER<span>.WEB</span>
+            </span>
+
+            <div class="preloader__progress">
+
+                <span id="preloaderProgress"></span>
+
+            </div>
+
+            <span
+                class="preloader__counter"
+                id="preloaderCounter"
+            >
+                0%
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         CUSTOM CURSOR
+    ====================================================== -->
+
+    <div
+        class="cursor"
+        id="cursor"
+        aria-hidden="true"
+    >
+
+        <div class="cursor__dot"></div>
+
+    </div>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header
+        class="site-header"
+        id="siteHeader"
+    >
+
+        <div class="container site-header__inner">
+
+            <!-- BRAND -->
+
+            <a
+                href="#inicio"
+                class="brand"
+                aria-label="STUBER.WEB — Inicio"
+            >
+
+                <span
+                    class="brand__mark"
+                    aria-hidden="true"
+                >
+                    S
+                </span>
+
+                <span class="brand__name">
+                    STUBER<span>.WEB</span>
+                </span>
+
+            </a>
+
+
+            <!-- DESKTOP NAVIGATION -->
+
+            <nav
+                class="main-nav site-header__nav"
+                id="mainNav"
+                aria-label="Navegación principal"
+            >
+
+                <a
+                    href="#inicio"
+                    class="main-nav__link active"
+                >
+                    Inicio
+                </a>
+
+                <a
+                    href="#sobre-mi"
+                    class="main-nav__link"
+                >
+                    Sobre mí
+                </a>
+
+                <a
+                    href="#servicios"
+                    class="main-nav__link"
+                >
+                    Servicios
+                </a>
+
+                <a
+                    href="#proyectos"
+                    class="main-nav__link"
+                >
+                    Proyectos
+                </a>
+
+                <a
+                    href="#proceso"
+                    class="main-nav__link"
+                >
+                    Proceso
+                </a>
+
+            </nav>
+
+
+            <!-- HEADER CTA -->
+
+            <button
+                type="button"
+                class="button btn button--small button--primary header-cta site-header__cta"
+                data-contact-trigger
+            >
+                Hablemos
+            </button>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+            >
+
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE NAVIGATION -->
+
+        <div
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-hidden="true"
+        >
+
+            <nav
+                class="mobile-menu__nav"
+                aria-label="Navegación móvil"
+            >
+
+                <a href="#inicio">
+                    Inicio
+                </a>
+
+                <a href="#sobre-mi">
+                    Sobre mí
+                </a>
+
+                <a href="#servicios">
+                    Servicios
+                </a>
+
+                <a href="#proyectos">
+                    Proyectos
+                </a>
+
+                <a href="#proceso">
+                    Proceso
+                </a>
+
+                <button
+                    type="button"
+                    data-contact-trigger
+                >
+                    Contacto
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main id="main-content">
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section
+            class="hero section"
+            id="inicio"
+        >
+
+            <div
+                class="hero__grid"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                class="hero__glow hero__glow--one"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                class="hero__glow hero__glow--two"
+                aria-hidden="true"
+            ></div>
+
+
+            <div class="container hero__container hero__layout">
+
+
+                <!-- HERO CONTENT -->
+
+                <div class="hero__content">
+
+                    <div class="eyebrow hero__eyebrow">
+
+                        <span
+                            class="status-dot"
+                            aria-hidden="true"
+                        ></span>
+
+                        <span>
+                           Federico Stuber · Desarrollo Web Freelance
+                        </span>
+
+                    </div>
+
+
+                    <h1 class="hero__title">
+
+                        <span class="hero__title-line">
+                           Tu negocio.
+                        </span>
+
+                         <span class="hero__title-line hero__title-line--accent">
+                           Una web a la altura.
+                        </span>
+
+                    </h1>
+
+
+                    <p class="hero__description">
+
+                        Diseño y desarrollo sitios web modernos,
+                        rápidos y personalizados para que tu negocio
+                        tenga una presencia digital profesional y
+                        convierta visitas en oportunidades.
+
+                    </p>
+
+
+                    <div class="hero__actions">
+
+    <button
+        type="button"
+        class="button btn button--primary magnetic"
+        data-contact-trigger
+    >
+        <span>
+            Empezar un proyecto
+        </span>
+
+        <span
+            class="button__icon"
+            aria-hidden="true"
+        >
+            ↗
+        </span>
+    </button>
+
+
+    <a
+        href="#proyectos"
+        class="button btn button--outline magnetic"
+    >
+        <span>
+            Ver proyectos
+        </span>
+    </a>
+
+</div>
+
+                    <!-- WHATSAPP -->
+
+                    <div class="hero__whatsapp">
+
+                        <span
+                            class="hero__whatsapp-status"
+                            aria-hidden="true"
+                        ></span>
+
+                        <span class="hero__whatsapp-text">
+                            ¿Preferís hablar directamente?
+                        </span>
+
+                        <a
+                            href="https://wa.me/5493765036949?text=Hola%20Federico%2C%20vi%20STUBER.WEB%20y%20me%20gustar%C3%ADa%20consultar%20por%20un%20proyecto%20web."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <span>
+                                WhatsApp
+                            </span>
+
+                            <span aria-hidden="true">
+                                ↗
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- TECHNOLOGIES -->
+
+                    <div class="hero__technologies hero__tech">
+
+                        <span>
+                            HTML
+                        </span>
+
+                        <span>
+                            CSS
+                        </span>
+
+                        <span>
+                            JavaScript
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HERO VISUAL -->
+
+                <div
+                    class="hero__visual"
+                    aria-hidden="true"
+                >
+
+                    <div class="code-window hero__code">
+
+                        <div class="code-window__header">
+
+                            <div class="code-window__dots">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+                            <span class="code-window__filename">
+                                index.html
+                            </span>
+
+                        </div>
+
+
+                        <div class="code-window__body">
+
+<pre><code><span class="code-tag">&lt;section</span>
+    <span class="code-attribute">class</span>=<span class="code-string">"stuber"</span><span class="code-tag">&gt;</span>
+
+    <span class="code-tag">&lt;h1&gt;</span>
+        <span class="code-text">STUBER.WEB</span>
+    <span class="code-tag">&lt;/h1&gt;</span>
+
+    <span class="code-tag">&lt;p&gt;</span>
+        <span class="code-text">Ideas → Experiences</span>
+    <span class="code-tag">&lt;/p&gt;</span>
+
+<span class="code-tag">&lt;/section&gt;</span></code></pre>
+
+                        </div>
+
+
+                        <div class="code-window__footer">
+
+                            <span>
+                                ●
+                                <span>
+                                    system.online
+                                </span>
+                            </span>
+
+                            <span>
+                                100%
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ORBITS -->
+
+                    <div
+                        class="hero-orbit hero-orbit--one hero__orbit"
+                        aria-hidden="true"
+                    ></div>
+
+                    <div
+                        class="hero-orbit hero-orbit--two hero__orbit"
+                        aria-hidden="true"
+                    ></div>
+
+
+                    <!-- FLOATING CARD -->
+
+                    <div class="hero-floating-card hero-floating-card--top floating-card floating-card--top">
+
+                        <span>
+                            01
+                        </span>
+
+                        <strong>
+                            Diseño
+                        </strong>
+
+                    </div>
+
+
+                    <div class="hero-floating-card hero-floating-card--bottom floating-card floating-card--bottom">
+
+                        <span>
+                            02
+                        </span>
+
+                        <strong>
+                            Código
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SCROLL -->
+
+            <div class="hero__scroll scroll-indicator">
+
+                <span>
+                    Scroll para explorar
+                </span>
+
+                <span class="hero__scroll-line"></span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             MARQUEE
+        ================================================== -->
+
+        <section
+            class="marquee"
+            aria-label="Áreas de trabajo"
+        >
+
+            <div class="marquee__track">
+
+                <span class="marquee__item">
+                    DISEÑO WEB
+                </span>
+
+                <span class="marquee__item">
+                    DESARROLLO
+                </span>
+
+                <span class="marquee__item">
+                    EXPERIENCIAS DIGITALES
+                </span>
+
+                <span class="marquee__item">
+                    FRONTEND
+                </span>
+
+                <span class="marquee__item">
+                    DISEÑO WEB
+                </span>
+
+                <span class="marquee__item">
+                    DESARROLLO
+                </span>
+
+                <span class="marquee__item">
+                    EXPERIENCIAS DIGITALES
+                </span>
+
+                <span class="marquee__item">
+                    FRONTEND
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ABOUT
+        ================================================== -->
+
+        <section
+            class="about section"
+            id="sobre-mi"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        01
+                    </span>
+
+                    <span class="section-label">
+                        Sobre mí
+                    </span>
+
+                </div>
+
+
+                <div class="about__grid">
+
+    <div class="about__intro">
+
+        <p class="about__lead">
+
+            No se trata solamente
+            de hacer una página bonita.
+
+        </p>
+
+    </div>
+
+
+    <div class="about__content about__details">
+
+        <p>
+            Soy Federico Stuber,
+            desarrollador web freelance
+            y creador de STUBER.WEB.
+        </p>
+
+        <p>
+            Desarrollo sitios web desde cero,
+            combinando diseño y código para
+            crear experiencias digitales que
+            representen la identidad y los
+            objetivos de cada proyecto.
+        </p>
+
+        <p>
+            Mi forma de trabajar parte de entender
+            primero qué necesita cada proyecto.
+            Después diseño, desarrollo y optimizo
+            cada detalle buscando un equilibrio
+            entre estética, rendimiento,
+            funcionalidad y experiencia de usuario.
+        </p>
+
+        <div class="about__approach">
+
+            <span>01</span>
+
+            <p>
+                Entender el proyecto. <br>
+                Diseñar con intención. <br>
+                Desarrollar a medida. <br>
+                Cuidar cada detalle.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SERVICES
+        ================================================== -->
+
+        <section
+            class="services section section--dark"
+            id="servicios"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <span class="section-label">
+                        Servicios
+                    </span>
+
+                </div>
+
+
+                <div class="services__header">
+
+                    <h2 class="section-title">
+
+                        Una web que trabaja
+                        <span>
+                            para vos.
+                        </span>
+
+                    </h2>
+
+                    <p>
+                        Soluciones digitales pensadas
+                        para comunicar, destacar y
+                        acompañar el crecimiento de
+                        cada proyecto.
+                    </p>
+
+                </div>
+
+
+                <div class="services__list">
+
+    <article class="service service-item">
+
+        <div class="service__number service-item__number">
+            01
+        </div>
+
+        <div class="service__content">
+
+            <h3 class="service-item__title">
+                Landing Pages
+            </h3>
+
+            <p class="service-item__description">
+                Páginas enfocadas en presentar un producto,
+                servicio o campaña y convertir visitas
+                en oportunidades.
+            </p>
+
+        </div>
+
+        <span
+            class="service__arrow service-item__link"
+            aria-hidden="true"
+        >
+            ↗
+        </span>
+
+    </article>
+
+
+    <article class="service service-item">
+
+        <div class="service__number service-item__number">
+            02
+        </div>
+
+        <div class="service__content">
+
+            <h3 class="service-item__title">
+                Sitios Web
+            </h3>
+
+            <p class="service-item__description">
+                Presencia digital profesional para empresas,
+                emprendimientos, profesionales y proyectos
+                personales.
+            </p>
+
+        </div>
+
+        <span
+            class="service__arrow service-item__link"
+            aria-hidden="true"
+        >
+            ↗
+        </span>
+
+    </article>
+
+
+    <article class="service service-item">
+
+        <div class="service__number service-item__number">
+            03
+        </div>
+
+        <div class="service__content">
+
+            <h3 class="service-item__title">
+                Desarrollo a medida
+            </h3>
+
+            <p class="service-item__description">
+                Sitios y soluciones personalizadas desarrolladas
+                desde cero según las necesidades de cada proyecto.
+            </p>
+
+        </div>
+
+        <span
+            class="service__arrow service-item__link"
+            aria-hidden="true"
+        >
+            ↗
+        </span>
+
+    </article>
+
+
+    <article class="service service-item">
+
+        <div class="service__number service-item__number">
+            04
+        </div>
+
+        <div class="service__content">
+
+            <h3 class="service-item__title">
+                Mantenimiento y mejoras
+            </h3>
+
+            <p class="service-item__description">
+                Actualizaciones, correcciones, optimización
+                y nuevas funcionalidades para mantener tu
+                sitio en evolución.
+            </p>
+
+        </div>
+
+        <span
+            class="service__arrow service-item__link"
+            aria-hidden="true"
+        >
+            ↗
+        </span>
+
+    </article>
+
+</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PROJECTS
+        ================================================== -->
+
+        <section
+            class="projects section"
+            id="proyectos"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        03
+                    </span>
+
+                    <span class="section-label">
+                        Proyectos
+                    </span>
+
+                </div>
+
+
+                <div class="projects__header">
+
+                    <h2 class="section-title">
+
+                        Trabajo que
+                        <span>
+                            habla por sí solo.
+                        </span>
+
+                    </h2>
+
+                    <p>
+                        Proyectos reales, experimentos
+                        y experiencias digitales
+                        desarrolladas con intención.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="projects__grid projects-grid"
+                    id="projectsGrid"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             STACK
+        ================================================== -->
+
+        <section
+            class="stack section section--dark"
+            id="tecnologias"
+        >
+
+            <div class="container">
+
+                <div class="stack__grid stack-grid">
+
+
+                    <div class="stack__intro">
+
+                        <span class="section-label">
+                            Tecnologías
+                        </span>
+
+                        <h2>
+                            Las herramientas
+                            detrás de cada proyecto.
+                        </h2>
+
+                        <p>
+                            Una base tecnológica pensada
+                            para construir sitios rápidos,
+                            mantenibles y adaptados a
+                            distintos dispositivos.
+                        </p>
+
+                    </div>
+
+
+                    <div class="stack__items">
+
+
+                        <div class="stack-item">
+
+                            <span>
+                                01
+                            </span>
+
+                            <strong>
+                                HTML5
+                            </strong>
+
+                        </div>
+
+
+                        <div class="stack-item">
+
+                            <span>
+                                02
+                            </span>
+
+                            <strong>
+                                CSS3
+                            </strong>
+
+                        </div>
+
+
+                        <div class="stack-item">
+
+                            <span>
+                                03
+                            </span>
+
+                            <strong>
+                                JavaScript
+                            </strong>
+
+                        </div>
+
+
+                        <div class="stack-item">
+
+                            <span>
+                                04
+                            </span>
+
+                            <strong>
+                                WordPress
+                            </strong>
+
+                        </div>
+
+
+                        <div class="stack-item">
+
+                            <span>
+                                05
+                            </span>
+
+                            <strong>
+                                Git
+                            </strong>
+
+                        </div>
+
+
+                        <div class="stack-item">
+
+                            <span>
+                                06
+                            </span>
+
+                            <strong>
+                                Responsive
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PROCESS
+        ================================================== -->
+
+        <section
+            class="process section"
+            id="proceso"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        04
+                    </span>
+
+                    <span class="section-label">
+                        Proceso
+                    </span>
+
+                </div>
+
+
+                <div class="process__header">
+
+                    <h2 class="section-title">
+
+                        De una idea a una
+                        <span>
+                            web real.
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="process__steps process-grid">
+
+
+                    <article class="process-step">
+
+                        <span class="process-step__number">
+                            01
+                        </span>
+
+                        <h3 class="process-step__title">
+                            Hablamos
+                        </h3>
+
+                        <p class="process-step__description">
+                            Conocemos tu proyecto,
+                            objetivos, necesidades
+                            y qué querés conseguir
+                            con la web.
+                        </p>
+
+                    </article>
+
+
+                    <article class="process-step">
+
+                        <span class="process-step__number">
+                            02
+                        </span>
+
+                        <h3 class="process-step__title">
+                            Planificamos
+                        </h3>
+
+                        <p class="process-step__description">
+                            Definimos estructura,
+                            contenido, funcionalidades
+                            y experiencia del sitio.
+                        </p>
+
+                    </article>
+
+
+                    <article class="process-step">
+
+                        <span class="process-step__number">
+                            03
+                        </span>
+
+                        <h3 class="process-step__title">
+                            Diseñamos
+                        </h3>
+
+                        <p class="process-step__description">
+                            Convertimos la idea en una
+                            identidad visual coherente
+                            con tu proyecto.
+                        </p>
+
+                    </article>
+
+
+                    <article class="process-step">
+
+                        <span class="process-step__number">
+                            04
+                        </span>
+
+                        <h3 class="process-step__title">
+                            Desarrollamos
+                        </h3>
+
+                        <p class="process-step__description">
+                            Transformamos el diseño en
+                            una experiencia funcional,
+                            responsive y optimizada.
+                        </p>
+
+                    </article>
+
+
+                    <article class="process-step">
+
+                        <span class="process-step__number">
+                            05
+                        </span>
+
+                        <h3 class="process-step__title">
+                            Publicamos
+                        </h3>
+
+                        <p class="process-step__description">
+                            Dejamos tu sitio preparado
+                            para salir al mundo y empezar
+                            a representar tu proyecto.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================================
+     FAQ
+     ===================================================== -->
+
+<section class="faq section" id="faq">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="section-number">05</span>
+            <span class="section-label">Preguntas frecuentes</span>
+        </div>
+
+        <div class="faq__header">
+
+            <h2 class="section-title">
+                Todo lo que necesitás saber <span>antes de empezar.</span>
+            </h2>
+
+            <p>
+                Algunas de las preguntas más comunes antes
+                de comenzar un proyecto web.
+            </p>
+
+        </div>
+
+
+        <div class="faq__list">
+
+            <details class="faq-item">
+                <summary>
+                    <span class="faq-item__number">01</span>
+                    <span class="faq-item__question">
+                        ¿Cuánto demora una página web?
+                    </span>
+                    <span class="faq-item__icon" aria-hidden="true">+</span>
+                </summary>
+
+                <div class="faq-item__answer">
+                    <p>
+                        El tiempo depende del tipo de proyecto,
+                        la cantidad de páginas y las funcionalidades
+                        necesarias. Una landing sencilla puede estar
+                        lista en pocos días, mientras que un sitio más
+                        completo requiere más tiempo. Después de conocer
+                        tu proyecto puedo darte un plazo estimado.
+                    </p>
+                </div>
+            </details>
+
+
+            <details class="faq-item">
+                <summary>
+                    <span class="faq-item__number">02</span>
+                    <span class="faq-item__question">
+                        ¿Cuánto cuesta una web?
+                    </span>
+                    <span class="faq-item__icon" aria-hidden="true">+</span>
+                </summary>
+
+                <div class="faq-item__answer">
+                    <p>
+                        No trabajo con un precio único porque cada
+                        proyecto es diferente. El presupuesto depende
+                        de la estructura, funcionalidades, diseño y
+                        necesidades específicas. Después de conocer
+                        tu proyecto puedo prepararte una propuesta
+                        acorde.
+                    </p>
+                </div>
+            </details>
+
+
+            <details class="faq-item">
+                <summary>
+                    <span class="faq-item__number">03</span>
+                    <span class="faq-item__question">
+                        ¿Trabajás con clientes de Argentina?
+                    </span>
+                    <span class="faq-item__icon" aria-hidden="true">+</span>
+                </summary>
+
+                <div class="faq-item__answer">
+                    <p>
+                        Sí. Trabajo con clientes de Argentina y puedo
+                        adaptar la propuesta y el medio de pago a
+                        proyectos locales.
+                    </p>
+                </div>
+            </details>
+
+
+            <details class="faq-item">
+                <summary>
+                    <span class="faq-item__number">04</span>
+                    <span class="faq-item__question">
+                        ¿Trabajás con clientes de otros países?
+                    </span>
+                    <span class="faq-item__icon" aria-hidden="true">+</span>
+                </summary>
+
+                <div class="faq-item__answer">
+                    <p>
+                        Sí. También trabajo de forma remota con clientes
+                        del exterior.
+                    </p>
+                </div>
+            </details>
+
+
+            <details class="faq-item">
+                <summary>
+                    <span class="faq-item__number">05</span>
+                    <span class="faq-item__question">
+                        ¿La web es responsive?
+                    </span>
+                    <span class="faq-item__icon" aria-hidden="true">+</span>
+                </summary>
+
+                <div class="faq-item__answer">
+                    <p>
+                        Sí. Todos los sitios se desarrollan pensando
+                        en distintos tamaños de pantalla, desde
+                        celulares hasta computadoras.
+                    </p>
+                </div>
+            </details>
+
+
+            <details class="faq-item">
+                <summary>
+                    <span class="faq-item__number">06</span>
+                    <span class="faq-item__question">
+                        ¿El dominio y hosting están incluidos?
+                    </span>
+                    <span class="faq-item__icon" aria-hidden="true">+</span>
+                </summary>
+
+                <div class="faq-item__answer">
+                    <p>
+                        No necesariamente. Puedo ayudarte a elegir y
+                        configurar el dominio y hosting adecuados según
+                        el proyecto. Si ya tenés ambos, también puedo
+                        trabajar sobre tu configuración actual.
+                    </p>
+                </div>
+            </details>
+
+
+            <details class="faq-item">
+                <summary>
+                    <span class="faq-item__number">07</span>
+                    <span class="faq-item__question">
+                        ¿Voy a poder actualizar el contenido?
+                    </span>
+                    <span class="faq-item__icon" aria-hidden="true">+</span>
+                </summary>
+
+                <div class="faq-item__answer">
+                    <p>
+                        Depende del tipo de proyecto. Puedo desarrollar
+                        sitios administrables cuando necesitás modificar
+                        contenido por tu cuenta, o encargarme yo del
+                        mantenimiento y las actualizaciones.
+                    </p>
+                </div>
+            </details>
+
+
+            <details class="faq-item">
+                <summary>
+                    <span class="faq-item__number">08</span>
+                    <span class="faq-item__question">
+                        ¿Qué pasa después de enviar el formulario?
+                    </span>
+                    <span class="faq-item__icon" aria-hidden="true">+</span>
+                </summary>
+
+                <div class="faq-item__answer">
+                    <p>
+                        Reviso la información de tu proyecto y me pongo
+                        en contacto con vos para conocer mejor lo que
+                        necesitás, resolver dudas y definir los próximos
+                        pasos.
+                    </p>
+                </div>
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- =================================================
+             CONTACT CTA
+        ================================================== -->
+
+        <section
+            class="contact-cta contact section section--dark"
+            id="contacto"
+        >
+
+            <div
+                class="contact-cta__glow"
+                aria-hidden="true"
+            ></div>
+
+
+            <div class="container contact-cta__container contact__content">
+
+                <span class="section-label">
+                    ¿Tenés un proyecto?
+                </span>
+
+
+                <h2 class="contact__title">
+
+                    Hagamos algo
+                    <span>
+                        increíble.
+                    </span>
+
+                </h2>
+
+
+                <p class="contact__description">
+                    Contame qué tenés en mente y
+                    vemos juntos cómo llevarlo
+                    a la web.
+                </p>
+
+
+                <div class="contact__actions">
+
+                    <button
+                        type="button"
+                        class="button btn button--primary button--large magnetic"
+                        id="contactProject"
+                        data-contact-trigger
+                    >
+
+                        <span>
+                            Empezar un proyecto
+                        </span>
+
+                        <span
+                            class="button__icon"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         PROJECT FORM
+    ====================================================== -->
+
+    <div
+        class="project-form"
+        id="projectForm"
+        aria-hidden="true"
+    >
+
+
+        <!-- BACKDROP -->
+
+        <div
+            class="project-form__backdrop"
+            data-form-close
+        ></div>
+
+
+        <!-- DIALOG -->
+
+        <div
+            class="project-form__dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="projectFormTitle"
+        >
+
+
+            <!-- HEADER -->
+
+            <div class="project-form__header">
+
+                <div>
+
+                    <span class="section-label">
+                        STUBER.WEB
+                    </span>
+
+                    <h2 id="projectFormTitle">
+                        Hablemos de tu proyecto.
+                    </h2>
+
+                    <p>
+                        Completá este breve formulario
+                        y contame qué tenés en mente.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="project-form__close"
+                    data-form-close
+                    aria-label="Cerrar formulario"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+
+            <div class="project-form__progress">
+
+                <div class="project-form__progress-top">
+
+                    <span id="formStepLabel">
+                        Paso 01 de 07
+                    </span>
+
+                    <span id="formProgressPercent">
+                        14%
+                    </span>
+
+                </div>
+
+
+                <div class="project-form__progress-bar">
+
+                    <span
+                        id="formProgressBar"
+                        style="width: 14.28%;"
+                    ></span>
+
+                </div>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <form
+                id="projectBriefForm"
+                class="project-form__body"
+                novalidate
+            >
+
+            <!-- Honeypot anti-spam: debe permanecer vacío. -->
+            <input
+                type="checkbox"
+                name="botcheck"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+                style="position:absolute;left:-9999px;opacity:0;pointer-events:none;"
+            >
+
+
+                <!-- =================================================
+                     STEP 01
+                ================================================== -->
+
+                <section
+                    class="project-form__step is-active"
+                    data-form-step="1"
+                >
+
+                    <div class="project-form__step-heading">
+
+                        <span>
+                            01 / Sobre vos
+                        </span>
+
+                        <h3>
+                            Primero, conozcamos
+                            quién está detrás del proyecto.
+                        </h3>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <div class="form-field">
+
+                            <label for="fullName">
+                                Nombre y apellido
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                            autocomplete="name"
+                                name="fullName"
+                                placeholder="Ej. Juan Pérez"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-field">
+
+                            <label for="email">
+                                Email
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                            autocomplete="email"
+                                name="email"
+                                placeholder="tu@email.com"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-field">
+
+                            <label for="whatsapp">
+                                WhatsApp
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="whatsapp"
+                            autocomplete="tel"
+                            inputmode="tel"
+                                name="whatsapp"
+                                placeholder="Ej. +54 9 376 123 4567"
+                                autocomplete="tel"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-field">
+
+                            <label for="company">
+                                Empresa / emprendimiento
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="company"
+                            autocomplete="organization"
+                                name="company"
+                                placeholder="Nombre de tu negocio"
+                                autocomplete="organization"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     STEP 02
+                ================================================== -->
+
+                <section
+                    class="project-form__step"
+                    data-form-step="2"
+                >
+
+                    <div class="project-form__step-heading">
+
+                        <span>
+                            02 / Tu proyecto
+                        </span>
+
+                        <h3>
+                            Contame qué querés construir.
+                        </h3>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="projectName">
+                            Nombre del proyecto
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="projectName"
+                            autocomplete="off"
+                            name="projectName"
+                            placeholder="Ej. Mi negocio, portfolio, tienda..."
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="projectDescription">
+                            ¿Qué querés hacer?
+                            <span>*</span>
+                        </label>
+
+                        <textarea
+                            id="projectDescription"
+                            name="projectDescription"
+                            rows="6"
+                            placeholder="Contame brevemente qué hace tu negocio, qué querés mostrar o qué problema querés resolver con la web."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label>
+                            ¿Ya tenés una página web?
+                            <span>*</span>
+                        </label>
+
+
+                        <div class="form-options form-options--grid">
+
+                            <label class="form-option">
+
+                                <input
+                                    type="radio"
+                                    name="hasWebsite"
+                                    value="Sí"
+                                    id="hasWebsiteYes"
+                                    required
+                                >
+
+                                <span>
+
+                                    <strong>
+                                        Sí
+                                    </strong>
+
+                                    <small>
+                                        Ya tengo una página web.
+                                    </small>
+
+                                </span>
+
+                            </label>
+
+
+                            <label class="form-option">
+
+                                <input
+                                    type="radio"
+                                    name="hasWebsite"
+                                    value="No"
+                                    id="hasWebsiteNo"
+                                >
+
+                                <span>
+
+                                    <strong>
+                                        No
+                                    </strong>
+
+                                    <small>
+                                        Todavía no tengo una web.
+                                    </small>
+
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="form-field"
+                        id="existingWebsiteField"
+                        hidden
+                    >
+
+                        <label for="existingWebsite">
+                            Enlace de tu página web
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="url"
+                            id="existingWebsite"
+                            autocomplete="url"
+                            name="existingWebsite"
+                            placeholder="https://tusitio.com"
+                            autocomplete="url"
+                        >
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     STEP 03
+                ================================================== -->
+
+                <section
+                    class="project-form__step"
+                    data-form-step="3"
+                >
+
+                    <div class="project-form__step-heading">
+
+                        <span>
+                            03 / Tipo de web
+                        </span>
+
+                        <h3>
+                            ¿Qué tipo de sitio necesitás?
+                        </h3>
+
+                    </div>
+
+
+                    <div class="form-options form-options--grid">
+
+
+                        <label class="form-option">
+
+                            <input
+                                type="radio"
+                                name="websiteType"
+                                value="Landing Page"
+                                required
+                            >
+
+                            <span>
+
+                                <strong>
+                                    Landing Page
+                                </strong>
+
+                                <small>
+                                    Una página enfocada en conversión.
+                                </small>
+
+                            </span>
+
+                        </label>
+
+
+                        <label class="form-option">
+
+                            <input
+                                type="radio"
+                                name="websiteType"
+                                value="Sitio institucional"
+                            >
+
+                            <span>
+
+                                <strong>
+                                    Institucional
+                                </strong>
+
+                                <small>
+                                    Web profesional para una empresa.
+                                </small>
+
+                            </span>
+
+                        </label>
+
+
+                        <label class="form-option">
+
+                            <input
+                                type="radio"
+                                name="websiteType"
+                                value="Portfolio"
+                            >
+
+                            <span>
+
+                                <strong>
+                                    Portfolio
+                                </strong>
+
+                                <small>
+                                    Para mostrar trabajos y experiencia.
+                                </small>
+
+                            </span>
+
+                        </label>
+
+
+                        <label class="form-option">
+
+                            <input
+                                type="radio"
+                                name="websiteType"
+                                value="E-commerce"
+                            >
+
+                            <span>
+
+                                <strong>
+                                    E-commerce
+                                </strong>
+
+                                <small>
+                                    Tienda online y productos.
+                                </small>
+
+                            </span>
+
+                        </label>
+
+
+                        <label class="form-option">
+
+                            <input
+                                type="radio"
+                                name="websiteType"
+                                value="Web para negocio"
+                            >
+
+                            <span>
+
+                                <strong>
+                                    Negocio
+                                </strong>
+
+                                <small>
+                                    Presencia digital para tu negocio.
+                                </small>
+
+                            </span>
+
+                        </label>
+
+
+                        <label class="form-option">
+
+                            <input
+                                type="radio"
+                                name="websiteType"
+                                value="Web App"
+                            >
+
+                            <span>
+
+                                <strong>
+                                    Web App
+                                </strong>
+
+                                <small>
+                                    Aplicación o sistema web.
+                                </small>
+
+                            </span>
+
+                        </label>
+
+
+                        <label class="form-option">
+
+                            <input
+                                type="radio"
+                                name="websiteType"
+                                value="Blog / contenido"
+                            >
+
+                            <span>
+
+                                <strong>
+                                    Blog / contenido
+                                </strong>
+
+                                <small>
+                                    Publicaciones y contenido.
+                                </small>
+
+                            </span>
+
+                        </label>
+
+
+                        <label class="form-option">
+
+                            <input
+                                type="radio"
+                                name="websiteType"
+                                value="Otro"
+                            >
+
+                            <span>
+
+                                <strong>
+                                    Otro
+                                </strong>
+
+                                <small>
+                                    Algo diferente.
+                                </small>
+
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     STEP 04
+                ================================================== -->
+
+                <section
+                    class="project-form__step"
+                    data-form-step="4"
+                >
+
+                    <div class="project-form__step-heading">
+
+                        <span>
+                            04 / Diseño y contenido
+                        </span>
+
+                        <h3>
+                            ¿Cómo imaginás la web?
+                        </h3>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label>
+                            Estilo que buscás
+                            <span>*</span>
+                        </label>
+
+
+                        <div class="form-options form-options--grid">
+
+
+                            <label class="form-option form-option--compact">
+
+                                <input
+                                    type="checkbox"
+                                    name="style"
+                                    value="Minimalista"
+                                >
+
+                                <span>
+                                    Minimalista
+                                </span>
+
+                            </label>
+
+
+                            <label class="form-option form-option--compact">
+
+                                <input
+                                    type="checkbox"
+                                    name="style"
+                                    value="Moderno"
+                                >
+
+                                <span>
+                                    Moderno
+                                </span>
+
+                            </label>
+
+
+                            <label class="form-option form-option--compact">
+
+                                <input
+                                    type="checkbox"
+                                    name="style"
+                                    value="Corporativo"
+                                >
+
+                                <span>
+                                    Corporativo
+                                </span>
+
+                            </label>
+
+
+                            <label class="form-option form-option--compact">
+
+                                <input
+                                    type="checkbox"
+                                    name="style"
+                                    value="Elegante"
+                                >
+
+                                <span>
+                                    Elegante
+                                </span>
+
+                            </label>
+
+
+                            <label class="form-option form-option--compact">
+
+                                <input
+                                    type="checkbox"
+                                    name="style"
+                                    value="Tecnológico"
+                                >
+
+                                <span>
+                                    Tecnológico
+                                </span>
+
+                            </label>
+
+
+                            <label class="form-option form-option--compact">
+
+                                <input
+                                    type="checkbox"
+                                    name="style"
+                                    value="Creativo"
+                                >
+
+                                <span>
+                                    Creativo
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="references">
+                            ¿Tenés referencias?
+                            <span>*</span>
+                        </label>
+
+                        <textarea
+                            id="references"
+                            name="references"
+                            rows="4"
+                            placeholder="Podés pasarme enlaces de webs que te gusten o contarme qué estilo buscás."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="contentStatus">
+                            ¿Tenés preparado el contenido?
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="contentStatus"
+                            name="contentStatus"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccioná una opción
+                            </option>
+
+                            <option value="Sí, tengo todo">
+                                Sí, tengo todo
+                            </option>
+
+                            <option value="Tengo una parte">
+                                Tengo una parte
+                            </option>
+
+                            <option value="Todavía no">
+                                Todavía no
+                            </option>
+
+                            <option value="Necesito ayuda">
+                                Necesito ayuda para prepararlo
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     STEP 05
+                ================================================== -->
+
+                <section
+                    class="project-form__step"
+                    data-form-step="5"
+                >
+
+                    <div class="project-form__step-heading">
+
+                        <span>
+                            05 / Funcionalidades
+                        </span>
+
+                        <h3>
+                            ¿Qué debería poder hacer tu web?
+                        </h3>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label>
+                            Seleccioná todo lo que necesites
+                            <span>*</span>
+                        </label>
+
+
+                        <div class="form-options form-options--grid">
+
+
+                            <label class="form-option form-option--compact">
+
+                                <input
+                                    type="checkbox"
+                                    name="features"
+                                    value="Formulario de contacto"
+                                >
+
+                                <span>
+                                    Formulario de contacto
+                                </span>
+
+                            </label>
+
+
+                            <label class="form-option form-option--compact">
+
+                                <input
+                                    type="checkbox"
+                                    name="features"
+                                    value="WhatsApp"
+                                >
+
+                                <span>
+                                    WhatsApp
+                                </span>
+
+                            </label>
+
+
+                            <label class="form-option form-option--compact">
+
+                                <input
+                                    type="checkbox"
+                                    name="features"
+                                    value="Redes sociales"
+                                >
+
+                                <span>
+                                    Redes sociales
+                                </span>
+
+                            </label>
+
+
+                            <label class="form-option form-option--compact">
+
+                                <input
+                                    type="checkbox"
+                                    name="features"
+                                    value="Galería"
+                                >
+
+                                <span>
+                                    Galería
+                                </span>
+
+                            </label>
+
+
+                            <label class="form-option form-option--compact">
+
+                                <input
+                                    type="checkbox"
+                                    name="features"
+                                    value="Catálogo"
+                                >
+
+                                <span>
+                                    Catálogo
+                                </span>
+
+                            </label>
+
+
+                            <label class="form-option form-option--compact">
+
+                                <input
+                                    type="checkbox"
+                                    name="features"
+                                    value="Reservas"
+                                >
+
+                                <span>
+                                    Reservas
+                                </span>
+
+                            </label>
+
+
+                            <label class="form-option form-option--compact">
+
+                                <input
+                                    type="checkbox"
+                                    name="features"
+                                    value="Pagos online"
+                                >
+
+                                <span>
+                                    Pagos online
+                                </span>
+
+                            </label>
+
+
+                            <label class="form-option form-option--compact">
+
+                                <input
+                                    type="checkbox"
+                                    name="features"
+                                    value="Usuarios y login"
+                                >
+
+                                <span>
+                                    Usuarios / Login
+                                </span>
+
+                            </label>
+
+
+                            <label class="form-option form-option--compact">
+
+                                <input
+                                    type="checkbox"
+                                    name="features"
+                                    value="Panel administrativo"
+                                >
+
+                                <span>
+                                    Panel administrativo
+                                </span>
+
+                            </label>
+
+
+                            <label class="form-option form-option--compact">
+
+                                <input
+                                    type="checkbox"
+                                    name="features"
+                                    value="Animaciones"
+                                >
+
+                                <span>
+                                    Animaciones
+                                </span>
+
+                            </label>
+
+
+                            <label class="form-option form-option--compact">
+
+                                <input
+                                    type="checkbox"
+                                    name="features"
+                                    value="SEO"
+                                >
+
+                                <span>
+                                    SEO
+                                </span>
+
+                            </label>
+
+
+                            <label class="form-option form-option--compact">
+
+                                <input
+                                    type="checkbox"
+                                    name="features"
+                                    value="Integraciones"
+                                >
+
+                                <span>
+                                    Integraciones
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="otherFeatures">
+                            ¿Algo más que necesites?
+                            <span>*</span>
+                        </label>
+
+                        <textarea
+                            id="otherFeatures"
+                            name="otherFeatures"
+                            rows="4"
+                            placeholder="Contame cualquier funcionalidad especial."
+                            required
+                        ></textarea>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     STEP 06
+                ================================================== -->
+
+                <section
+                    class="project-form__step"
+                    data-form-step="6"
+                >
+
+                    <div class="project-form__step-heading">
+
+                        <span>
+                            06 / Presupuesto y tiempos
+                        </span>
+
+                        <h3>
+                            Para poder orientarte mejor.
+                        </h3>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="budget">
+                            ¿Qué presupuesto tenés pensado?
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="budget"
+                            name="budget"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccioná un rango
+                            </option>
+
+                            <option value="Menos de USD 150">
+                                Menos de USD 150
+                            </option>
+
+                            <option value="USD 150 - 300">
+                                USD 150 — 300
+                            </option>
+
+                            <option value="USD 300 - 500">
+                                USD 300 — 500
+                            </option>
+
+                            <option value="USD 500 - 1000">
+                                USD 500 — 1.000
+                            </option>
+
+                            <option value="Más de USD 1000">
+                                Más de USD 1.000
+                            </option>
+
+                            <option value="No estoy seguro">
+                                No estoy seguro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="deadline">
+                            ¿Cuándo te gustaría tenerla lista?
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="deadline"
+                            name="deadline"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccioná una opción
+                            </option>
+
+                            <option value="Lo antes posible">
+                                Lo antes posible
+                            </option>
+
+                            <option value="1 - 2 semanas">
+                                1 — 2 semanas
+                            </option>
+
+                            <option value="2 - 4 semanas">
+                                2 — 4 semanas
+                            </option>
+
+                            <option value="1 - 2 meses">
+                                1 — 2 meses
+                            </option>
+
+                            <option value="Sin fecha definida">
+                                Sin fecha definida
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="hostingStatus">
+                            ¿Tenés dominio y hosting?
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="hostingStatus"
+                            name="hostingStatus"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccioná una opción
+                            </option>
+
+                            <option value="Sí, tengo ambos">
+                                Sí, tengo ambos
+                            </option>
+
+                            <option value="Tengo dominio">
+                                Tengo dominio
+                            </option>
+
+                            <option value="Tengo hosting">
+                                Tengo hosting
+                            </option>
+
+                            <option value="No tengo">
+                                No tengo todavía
+                            </option>
+
+                            <option value="No sé qué necesito">
+                                No sé qué necesito
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     STEP 07
+                ================================================== -->
+
+                <section
+                    class="project-form__step"
+                    data-form-step="7"
+                >
+
+                    <div class="project-form__step-heading">
+
+                        <span>
+                            07 / Últimos detalles
+                        </span>
+
+                        <h3>
+                            Ya casi estamos.
+                        </h3>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="additionalDetails">
+                            ¿Hay algo más que debería saber?
+                            <span>*</span>
+                        </label>
+
+                        <textarea
+                            id="additionalDetails"
+                            name="additionalDetails"
+                            rows="6"
+                            placeholder="Cualquier detalle, idea, duda o requisito que quieras contarme."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="source">
+                            ¿Cómo conociste STUBER.WEB?
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="source"
+                            name="source"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccioná una opción
+                            </option>
+
+                            <option value="Instagram">
+                                Instagram
+                            </option>
+
+                            <option value="Google">
+                                Google
+                            </option>
+
+                            <option value="Recomendación">
+                                Recomendación
+                            </option>
+
+                            <option value="TikTok">
+                                TikTok
+                            </option>
+
+                            <option value="Otro">
+                                Otro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <label class="form-consent">
+
+                        <input
+                            type="checkbox"
+                            id="consent"
+                            name="consent"
+                            required
+                        >
+
+                        <span>
+                            Entiendo que este formulario se utiliza
+                            para conocer mi proyecto y poder preparar
+                            una propuesta adecuada.
+                        </span>
+
+                    </label>
+
+                </section>
+
+
+                <!-- =================================================
+                     SUMMARY
+                ================================================== -->
+
+                <section
+                    class="project-form__summary"
+                    id="projectFormSummary"
+                    aria-hidden="true"
+                >
+
+                    <div class="project-form__step-heading">
+
+                        <span>
+                            RESUMEN
+                        </span>
+
+                        <h3>
+                            Revisá tu información.
+                        </h3>
+
+                        <p>
+                            Antes de enviarla, comprobá que
+                            todos los datos sean correctos.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="project-form__summary-content"
+                        id="formSummaryContent"
+                    ></div>
+
+                </section>
+
+
+                <!-- =================================================
+                     SUCCESS
+                ================================================== -->
+
+                <section
+                    class="project-form__success"
+                    id="projectFormSuccess"
+                    aria-hidden="true"
+                    hidden
+                >
+
+                    <div class="project-form__success-icon">
+                        ✓
+                    </div>
+
+                    <span class="section-label">
+                        MENSAJE ENVIADO
+                    </span>
+
+                    <h3>
+                        ¡Proyecto enviado correctamente!
+                    </h3>
+
+                    <p>
+                        Recibí correctamente la información
+                        de tu proyecto. Voy a revisarla y
+                        ponerme en contacto con vos para
+                        hablar sobre los próximos pasos.
+                    </p>
+
+
+                    <div class="project-form__success-whatsapp">
+
+                        <span class="project-form__success-whatsapp-label">
+                            ¿Querés hablar directamente?
+                        </span>
+
+
+                        <a
+                            href="https://wa.me/5493765036949?text=Hola%20Federico%2C%20vi%20STUBER.WEB%20y%20me%20gustar%C3%ADa%20consultar%20por%20un%20proyecto%20web."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <span>
+                                WhatsApp
+                            </span>
+
+                            <strong>
+                                +54 9 376 503 6949
+                            </strong>
+
+                            <span
+                                class="button__icon"
+                                aria-hidden="true"
+                            >
+                                ↗
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="button button--primary"
+                        data-form-close
+                    >
+                        Cerrar
+                    </button>
+
+                </section>
+
+
+                <!-- ERROR -->
+
+                <div
+                    class="project-form__error"
+                    id="projectFormError"
+                    role="alert"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- NAVIGATION -->
+
+                <div
+                    class="project-form__navigation"
+                    id="projectFormNavigation"
+                >
+
+                    <button
+                        type="button"
+                        class="button btn button--outline"
+                        id="formBack"
+                    >
+
+                        ← Atrás
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="button btn button--primary"
+                        id="formNext"
+                    >
+
+                        Continuar
+
+                        <span
+                            class="button__icon"
+                            aria-hidden="true"
+                        >
+                            →
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="button btn button--primary"
+                        id="formSubmit"
+                    >
+
+                        Enviar proyecto
+
+                        <span
+                            class="button__icon"
+                            aria-hidden="true"
+                        >
+                            ↗
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <div class="site-footer__links">
+
+    <a href="#inicio">
+        Inicio
+    </a>
+
+    <a href="#sobre-mi">
+        Sobre mí
+    </a>
+
+    <a href="#servicios">
+        Servicios
+    </a>
+
+    <a href="#proyectos">
+        Proyectos
+    </a>
+
+    <a href="#contacto">
+        Contacto
+    </a>
+
+    <a href="legal/terminos-y-condiciones.html">
+        Términos y Condiciones
+    </a>
+
+    <a href="legal/politica-de-privacidad.html">
+        Política de Privacidad
+    </a>
+
+    <a href="legal/aviso-legal.html">
+        Aviso Legal
+    </a>
+
+</div>
+
+
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+
+    <script src="data/projects.js"></script>
+
+    <script src="js/navigation.js"></script>
+
+    <script src="js/animations.js"></script>
+
+    <script src="js/cursor.js"></script>
+
+    <script src="js/contact.js"></script>
+
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
